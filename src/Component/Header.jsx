@@ -17,20 +17,19 @@ function Header() {
     window.open("https://maps.app.goo.gl/oM5gTosMRtTYH7zWA", "_blank");
   };
 
-  const DropdownMenu = () => {
+  const DropdownMenu = ({ title, items }) => {
     const [isOpen, setIsOpen] = useState(false);
     let closeTimeout;
 
     const handleMouseEnter = () => {
-      clearTimeout(closeTimeout); // Cancel any pending close timeout
+      clearTimeout(closeTimeout);
       setIsOpen(true);
     };
 
     const handleMouseLeave = () => {
-      // Set a delay to close the dropdown (500ms delay now)
       closeTimeout = setTimeout(() => {
         setIsOpen(false);
-      }, 500); // Adjust the delay as needed (500ms in this case)
+      }, 500);
     };
 
     return (
@@ -39,38 +38,47 @@ function Header() {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        {/* Trigger for the dropdown */}
-        <button className="font-bold py-2 px-4 rounded">WHERE WE OPERATE</button>
+        <button className="font-bold py-2 px-4 rounded">{title}</button>
 
-        {/* Dropdown Menu */}
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: 10 }}  // Start from slightly below
-            animate={{ opacity: 1, y: 0 }} 
-            transition={{ duration: 0.2 }}  // Animate to original position
-            className="absolute left-0 shadow-lg bg-white p-4 mt-2 rounded-b-xl w-48"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.2 }}
+            className="absolute left-0 shadow-lg bg-white p-4 mt-2 rounded-b-xl w-56"
           >
             <ul className="font-inter text-gray-700 font-bold text-md">
-              <li>
-                <Link to="/REGION" className="block py-2 px-4 hover:bg-gray-100 rounded">
-                  REGION
-                </Link>
-                <hr className="mt-2" />
-              </li>
-              <li>
-                <Link to="/MARKETPLACES" className="block py-4 px-4 hover:bg-gray-100 rounded">
-                  MARKETPLACES
-                </Link>
-                <hr />
-              </li>
-              <li>
-                <Link
-                  to="/Shopping Cart Management"
-                  className="block py-3 px-4 hover:bg-gray-100 rounded"
-                >
-                  Shopping Cart Management
-                </Link>
-              </li>
+              {items.map((item, index) => (
+                <li key={index} className="relative group">
+                  <Link
+                    to={item.link}
+                    className="block py-2 px-4 hover:bg-gray-100 rounded"
+                  >
+                    {item.name}
+                  </Link>
+                  {item.submenu && (
+                    <motion.div
+                      initial={{ opacity: 0, x: 10 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute left-full top-0 bg-white shadow-lg p-4 rounded-b-xl w-56"
+                    >
+                      <ul>
+                        {item.submenu.map((subitem, subIndex) => (
+                          <li key={subIndex}>
+                            <Link
+                              to={subitem.link}
+                              className="block py-2 px-4 hover:bg-gray-100 rounded"
+                            >
+                              {subitem.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </motion.div>
+                  )}
+                </li>
+              ))}
             </ul>
           </motion.div>
         )}
@@ -78,11 +86,41 @@ function Header() {
     );
   };
 
+  const dropdownItems = {
+    whereWeOperate: [
+      { name: "Region", link: "/region" },
+      { name: "Marketplaces", link: "/marketplaces" },
+      { name: "Shopping Cart Management", link: "/shopping-cart-management" },
+    ],
+    whatWeDo: [
+      {
+        name: "Strategy",
+        link: "/strategy",
+        submenu: [
+          { name: "Planning", link: "/strategy/planning" },
+          { name: "Execution", link: "/strategy/execution" },
+        ],
+      },
+      { name: "Design", link: "/design" },
+      { name: "Development", link: "/development" },
+    ],
+    services: [
+      {
+        name: "Web Development",
+        link: "/web-development",
+        submenu: [
+          { name: "Frontend", link: "/web-development/frontend" },
+          { name: "Backend", link: "/web-development/backend" },
+        ],
+      },
+      { name: "App Development", link: "/app-development" },
+      { name: "UI/UX Design", link: "/ui-ux-design" },
+    ],
+  };
+
   return (
     <header className="fixed top-0 left-0 h-40 w-full shadow-lg z-50 bg-transparent backdrop-blur-lg">
-      {/* Top info section */}
       <div className="flex">
-        {/* Email */}
         <div className="flex flex-col md:flex-row gap-1 justify-center ml-96 mt-4">
           <motion.div
             initial={{ x: -300, opacity: 0 }}
@@ -96,7 +134,6 @@ function Header() {
             </Link>
           </motion.div>
           <RxDividerVertical className="text-2xl text-gray-600" />
-          {/* Address */}
           <motion.div
             initial={{ x: 300, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
@@ -109,7 +146,6 @@ function Header() {
             </Link>
           </motion.div>
         </div>
-        {/* Social Media Links */}
         <div className="flex ml-80 gap-6 mt-4">
           <Link
             to="https://www.facebook.com/stolidzonetechnologies"
@@ -150,9 +186,7 @@ function Header() {
         </div>
       </div>
 
-      {/* Main Header Content */}
       <div className="container mx-auto flex flex-wrap -mt-4 ml-0">
-        {/* Logo */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -167,7 +201,6 @@ function Header() {
           </Link>
         </motion.div>
 
-        {/* Navigation Links */}
         <motion.nav
           initial={{ y: -50, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -177,16 +210,11 @@ function Header() {
           <Link to="/" className="hover:text-blue-600">
             HOME
           </Link>
-          <DropdownMenu />
-          <Link to="/what-we-do" className="hover:text-blue-600">
-            WHAT WE DO
-          </Link>
-          <Link to="/services" className="hover:text-blue-600">
-            SERVICES
-          </Link>
+          <DropdownMenu title="WHERE WE OPERATE" items={dropdownItems.whereWeOperate} />
+          <DropdownMenu title="WHAT WE DO" items={dropdownItems.whatWeDo} />
+          <DropdownMenu title="SERVICES" items={dropdownItems.services} />
         </motion.nav>
 
-        {/* Appointment Button */}
         <motion.div
           initial={{ scale: 0.8, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}

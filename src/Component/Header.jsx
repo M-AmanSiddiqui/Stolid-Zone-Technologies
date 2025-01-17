@@ -239,7 +239,7 @@ function Header() {
     const handleMouseLeave = () => {
       closeTimeout = setTimeout(() => {
         setIsOpen(false);
-      }, 500);
+      }, 700);
     };
 
     return (
@@ -262,31 +262,36 @@ function Header() {
                 <li key={index} className="relative group">
                   <Link
                     to={item.link}
-                    className="block py-2 px-4 hover:bg-gray-100 rounded"
+                    className="block py-4 px-4 hover:bg-gray-100 rounded"
                   >
                     {item.name}
                   </Link>
+                   {/* Render <hr> only if it's not the last item */}
+         
                   {item.submenu && (
-                    <motion.div
-                      initial={{ opacity: 0, x: 10 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ duration: 0.2 }}
-                      className="absolute left-full top-0 bg-white shadow-lg p-4 rounded-b-xl w-56"
-                    >
-                      <ul>
-                        {item.submenu.map((subitem, subIndex) => (
-                          <li key={subIndex}>
-                            <Link
-                              to={subitem.link}
-                              className="block py-2 px-4 hover:bg-gray-100 rounded"
-                            >
-                              {subitem.name}
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </motion.div>
-                  )}
+  <motion.div
+    initial={{ opacity: 0, x: 10 }}
+    animate={{ opacity: 1, x: 0 }}
+    transition={{ duration: 0.2 }}
+    className="absolute left-52 -top-4 bg-white shadow-lg p-5 rounded-b-xl w-56"
+  >
+    <ul>
+      {item.submenu.map((subitem, subIndex) => (
+        <li key={subIndex}>
+          <Link
+            to={subitem.link}
+            className="block py-4 px-4 hover:bg-gray-100 rounded"
+          >
+            {subitem.name}
+          </Link>
+          {/* Render <hr> only if it's not the last item */}
+          {subIndex !== item.submenu.length - 1 && <hr className="mt-1" />}
+        </li>
+      ))}
+    </ul>
+  </motion.div>
+)}
+
                 </li>
               ))}
             </ul>
@@ -298,9 +303,44 @@ function Header() {
 
   const dropdownItems = {
     whereWeOperate: [
-      { name: "Region", link: "/region" },
-      { name: "Marketplaces", link: "/marketplaces" },
-      { name: "Shopping Cart Management", link: "/shopping-cart-management" },
+      {
+        name: "REGION" ,
+        link: "/REGION",
+        submenu: [
+          { name: "UNITED STATES", link: "/REGION/UNITED STATES" },
+          { name: "EUROPE", link: "/REGION/EUROPE" },
+          { name: "CANADA", link: "/REGION/CANADA" },
+          { name: "MIDDLE EAST", link: "/REGION/UNITED STATES" },
+        ],
+      },
+
+
+      {
+        name: "MARKETPLACES",
+        link: "/MARKETPLACES",
+        submenu: [
+          { name: "AMAZON", link: "/MARKETPLACES/AMAZON" },
+          { name: "ETSY", link: "/MARKETPLACES/ETSY" },
+          { name: "EBAY", link: "/MARKETPLACES/EBAY" },
+          { name: "FACEBOOK SHOP", link: "/MARKETPLACES/FACEBOOK SHOP" },
+          { name: "GOOGLE SHOP", link: "/MARKETPLACES/GOOGLE SHOP" },
+          { name: "WALMART", link: "/MARKETPLACES/WALMART" },
+        ],
+      },
+
+      {
+        name: "SHOPPING CART MANAGEMENT",
+        link: "/SHOPPINGCART",
+        submenu: [
+          { name: "SHOPIFY", link: "/SHOPPINGCART/SHOPIFY" },
+          { name: "BIGCOMMERCE", link: "/SHOPPINGCART/BIGCOMMERCE" },
+          { name: "WOOCOMMERCE", link: "/SHOPPINGCART/WOOCOMMERCE" },
+          { name: "MAGENTO", link: "/SHOPPINGCART/MAGENTO" },
+        ],
+      },
+
+
+
     ],
     whatWeDo: [
       {

@@ -404,7 +404,7 @@ function Header() {
     setIsSearchOpen(!isSearchOpen);
   };
 
-  const DropdownMenu = ({ title, items }) => {
+  const DropdownMenu = ({ title , items }) => {
     const [isOpen, setIsOpen] = useState(false);
     let closeTimeout;
 
@@ -425,7 +425,7 @@ function Header() {
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >
-        <button className="font-bold py-2 px-4 rounded">{title}</button>
+        <button className="font-bold py-2 px-4 rounded text-md  hover:text-blue-800">{title}</button>
         {isOpen && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -438,9 +438,10 @@ function Header() {
                 <li key={index} className="relative group">
                   <Link
                     to={item.link}
-                    className="block py-4 px-4 hover:bg-gray-100 rounded"
+                    className="block py-4 px-4 hover:bg-gray-100 rounded "
                   >
                     {item.name}
+                  
                   </Link>
                   {item.submenu && (
                     <motion.div
@@ -698,7 +699,7 @@ function Header() {
           transition={{ duration: 0.8 }}
           className="md:flex md:items-center mt-12 ml-64 space-x-14 text-sm font-bold"
         >
-          <Link to="/" className="hover:text-blue-600">
+          <Link to="/" className="hover:text-blue-800">
             HOME
           </Link>
           <DropdownMenu title="WHERE WE OPERATE" items={dropdownItems.whereWeOperate} />
@@ -726,7 +727,7 @@ function Header() {
   {!isSearchOpen && (
     <button
       onClick={handleSearchClick}
-      className="bg-white text-black p-4 mt-10 ml-14 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out"
+      className="bg-white text-black p-4 mt-10 ml-14 rounded-full flex items-center justify-center  transform transition-transform duration-300 ease-in-out hover:scale-110"
     >
       <BsSearch size={20} />
     </button>
@@ -736,7 +737,7 @@ function Header() {
   {isSearchOpen && (
     <button
       onClick={() => setIsSearchOpen(false)} // Close search when cancel is clicked
-      className="bg-white text-black p-4 mt-10 ml-14 rounded-full flex items-center justify-center transition-all duration-300 ease-in-out"
+      className="bg-white text-black p-4 mt-10 ml-14 rounded-full flex items-center justify-center  transform transition-transform duration-300 ease-in-out hover:scale-110"
   
     >
       <MdOutlineCancel size={22} />

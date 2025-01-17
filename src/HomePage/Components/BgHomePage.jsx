@@ -11,7 +11,9 @@ function BgHomePage() {
         playsInline
       >
         <source src={BgHero} type="video/mp4" />
+        
       </video>
+      <h1 className="bg-black absolute">abb</h1>
     </div>
   );
 }

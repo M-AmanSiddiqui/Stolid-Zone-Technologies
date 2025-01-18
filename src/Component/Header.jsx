@@ -416,7 +416,7 @@ const Header = () => {
   const handleSearchClick = () => {
     setIsSearchOpen(!isSearchOpen);
   };
-  const menuItems = [
+const menuItems = [
     {
       key: 'home',
       title: 'HOME',
@@ -431,32 +431,32 @@ const Header = () => {
           key: 'region',
           title: 'REGION',
           children: [
-            { key: 'unitedStates', label: 'UNITED STATES', link: '/REGION/UNITED STATES' },
-            { key: 'europe', label: 'EUROPE', link: '/REGION/EUROPE' },
-            { key: 'canada', label: 'CANADA', link: '/REGION/CANADA' },
-            { key: 'middleEast', label: 'MIDDLE EAST', link: '/REGION/MIDDLE EAST' },
+            { key: 'unitedStates', label: 'UNITED STATES', link: '/UNITED STATES' },
+            { key: 'europe', label: 'EUROPE', link: '/EUROPE' },
+            { key: 'canada', label: 'CANADA', link: '/CANADA' },
+            { key: 'middleEast', label: 'MIDDLE EAST', link: '/MIDDLE EAST' },
           ],
         },
         {
           key: 'marketplaces',
           title: 'MARKETPLACES',
           children: [
-            { key: 'amazon', label: 'AMAZON', link: '/MARKETPLACES/AMAZON' },
-            { key: 'etsy', label: 'ETSY', link: '/MARKETPLACES/ETSY' },
-            { key: 'ebay', label: 'EBAY', link: '/MARKETPLACES/EBAY' },
-            { key: 'facebookShop', label: 'FACEBOOK SHOP', link: '/MARKETPLACES/FACEBOOK SHOP' },
-            { key: 'googleShop', label: 'GOOGLE SHOP', link: '/MARKETPLACES/GOOGLE SHOP' },
-            { key: 'walmart', label: 'WALMART', link: '/MARKETPLACES/WALMART' },
+            { key: 'amazon', label: 'AMAZON', link: '/AMAZON' },
+            { key: 'etsy', label: 'ETSY', link: '/ETSY' },
+            { key: 'ebay', label: 'EBAY', link: '/EBAY' },
+            { key: 'facebookShop', label: 'FACEBOOK SHOP', link: '/FACEBOOK SHOP' },
+            { key: 'googleShop', label: 'GOOGLE SHOP', link: '/GOOGLE SHOP' },
+            { key: 'walmart', label: 'WALMART', link: '/WALMART' },
           ],
         },
         {
           key: 'shoppingCart',
           title: 'SHOPPING CART MANAGEMENT',
           children: [
-            { key: 'shopify', label: 'SHOPIFY', link: '/SHOPPINGCART/SHOPIFY' },
-            { key: 'bigcommerce', label: 'BIGCOMMERCE', link: '/SHOPPINGCART/BIGCOMMERCE' },
-            { key: 'woocommerce', label: 'WOOCOMMERCE', link: '/SHOPPINGCART/WOOCOMMERCE' },
-            { key: 'magento', label: 'MAGENTO', link: '/SHOPPINGCART/MAGENTO' },
+            { key: 'shopify', label: 'SHOPIFY', link: '/SHOPIFY' },
+            { key: 'bigcommerce', label: 'BIGCOMMERCE', link: '/BIGCOMMERCE' },
+            { key: 'woocommerce', label: 'WOOCOMMERCE', link: '/WOOCOMMERCE' },
+            { key: 'magento', label: 'MAGENTO', link: '/MAGENTO' },
           ],
         },
       ],
@@ -469,22 +469,142 @@ const Header = () => {
           key: 'ecommerceMarketing',
           title: 'E-COMMERCE MARKETING & ADVERTISING',
           children: [
-            { key: 'ppcMarketing', label: 'PPC MARKETING', link: '/E-COMMERCE MARKETING & ADVERTISING/PPC MARKETING' },
-            { key: 'promotionStrategy', label: 'PROMOTION STRATEGY', link: '/E-COMMERCE MARKETING & ADVERTISING/PROMOTION STRATEGY' },
-            { key: 'dspAdvertising', label: 'DSP ADVERTISING', link: '/E-COMMERCE MARKETING & ADVERTISING/DSP ADVERTISING' },
-            { key: 'seoListing', label: 'SEARCH ENGINE AND LISTING OPTIMIZATION', link: '/E-COMMERCE MARKETING & ADVERTISING/SEARCH ENGINE AND LISTING OPTIMIZATION' },
-            { key: 'companyCreation', label: 'COMPANY CREATION', link: '/E-COMMERCE MARKETING & ADVERTISING/COMPANY CREATION' },
-            { key: 'productLaunch', label: 'PRODUCT LAUNCHES', link: '/E-COMMERCE MARKETING & ADVERTISING/PRODUCT LAUNCHES' },
+            { key: 'ppcMarketing', label: 'PPC MARKETING', link: '/PPC MARKETING' },
+            { key: 'promotionStrategy', label: 'PROMOTION STRATEGY', link: '/PROMOTION STRATEGY' },
+            { key: 'dspAdvertising', label: 'DSP ADVERTISING', link: '/DSP ADVERTISING' },
+
+            { key: 'seoListing', label: 'SEARCH ENGINE AND LISTING OPTIMIZATION', link: '/SEARCH ENGINE AND LISTING OPTIMIZATION', 
+              children: [
+                { key: 'phase1', label: 'SEARCH TERM OPTIMIZATION', link: '/SEARCH TERM OPTIMIZATION' },
+                { key: 'phase2', label: 'INCREMENTAL INDEXING', link: '/INCREMENTAL INDEXING' },
+                { key: 'phase3', label: 'MARKET SHARE', link: '/MARKET SHARE' },
+              ]
+            },
+
+            { key: 'companyCreation', label: 'COMPANY CREATION', link: '/COMPANY CREATION' },
+            { key: 'productLaunch', label: 'PRODUCT LAUNCHES', link: '/PRODUCT LAUNCHES' },
           ],
         },
         {
           key: 'marketplaceManagement',
           title: 'FULL-SERVICE MARKETPLACE MANAGEMENT',
           children: [
-            { key: 'adsManagement', label: 'ADS MANAGEMENT SERVICE', link: '/FULL-SERVICE MARKETPLACE MANAGEMENT/ADS MANAGEMENT SERVICE' },
-            { key: 'storeManagement', label: 'STORE MANAGEMENT SERVICE', link: '/FULL-SERVICE MARKETPLACE MANAGEMENT/STORE MANAGEMENT SERVICE' },
+            { key: 'adsManagement', label: 'ADS MANAGEMENT SERVICE', link: '/ADS MANAGEMENT SERVICE' },
+            { key: 'storeManagement', label: 'STORE MANAGEMENT SERVICE', link: '/STORE MANAGEMENT SERVICE' },
+            { 
+              key: 'vendorCentralManagement', // Unique key
+              label: 'VENDOR CENTRAL MANAGEMENT SERVICE', // Label for menu
+              link: '/VENDOR CENTRAL MANAGEMENT SERVICE' // Link to route
+            },
+            { 
+              key: 'postsManagement', // Unique key
+              label: 'POSTS MANAGEMENT SERVICE', // Label for menu
+              link: '/POSTS MANAGEMENT SERVICE' // Link to route
+            },
+            { 
+              key: 'logisticsAndFulfillment', // Unique key
+              label: 'LOGISTICS & FULFILLMENT SERVICE', // Label for menu
+              link: '/LOGISTICS & FULFILLMENT SERVICE' // Link to route
+            },
+            { 
+              key: 'goToMarketStrategies', // Unique key
+              label: 'GO TO MARKET STRATEGIES SERVICE', // Label for menu
+              link: '/GO TO MARKET STRATEGIES SERVICE' // Link to route
+            },
+            { 
+              key: 'sellerCentralManagement', // Unique key
+              label: 'SELLER CENTRAL MANAGEMENT SERVICE', // Label for menu
+              link: '/SELLER CENTRAL MANAGEMENT SERVICE' // Link to route
+            }
+         
           ],
         },
+
+        {
+          key: 'auditandSuspension',
+          title: 'AUDIT AND SUSPENSION',
+          children: [
+            { key: 'brandprotection', label: 'BRAND PROTECTION', link: '/BRAND PROTECTION' },
+            { key: 'consumeraudit', label: 'CONSUMER INSIGHT AUDIT', link: '/CONSUMER INSIGHT AUDIT' },
+            { 
+              key: 'listing', // Unique key
+              label: 'LISTING REINSTATEMENT', // Label for menu
+              link: '/LISTING REINSTATEMENT' // Link to route
+            },
+            { 
+              key: 'accountsuspension', // Unique key
+              label: 'ACCOUNT SUSPENSION', // Label for menu
+              link: '/ACCOUNT SUSPENSION' // Link to route
+            },
+         
+           
+         
+          ],
+        },
+
+
+        {
+          key: 'branding&visual',
+          title: 'BRANDING & VISUAL CONTENT',
+          children: [
+            { key: 'brandguidelines', label: 'BRAND GUIDELINES', link: '/BRAND GUIDELINES' },
+            { key: 'storebranding', label: 'STORE FRONT & BRANDING', link: '/STORE FRONT & BRANDING' },
+            { 
+              key: 'photography', // Unique key
+              label: 'PRODUCT PHOTOGRAPHY', // Label for menu
+              link: '/PRODUCT PHOTOGRAPHY' // Link to route
+            },
+            { 
+              key: 'videography', // Unique key
+              label: 'PRODUCT VIDEOPHOTOGRAPHY', // Label for menu
+              link: '/PRODUCT VIDEOPHOTOGRAPHY' // Link to route
+            },
+            { 
+              key: 'enhancedbrand', // Unique key
+              label: 'ENHANCED BRAND CONTENT A+ ', // Label for menu
+              link: '/ENHANCED BRAND CONTENT A+' // Link to route
+            },
+        
+          ],
+        },
+
+
+
+        {
+          key: 'copywriting',
+          title: 'COPY WRITING AND OPTIMIZATION',
+          children: [
+            { key: 'copywriting',
+               label: 'COPY WRITING AND OPTIMIZATION',
+                link: '/COPY WRITING AND OPTIMIZATION' },
+            { key: 'catalogsetup',
+               label: 'CATALOG SETUP SERVICES',
+               link: '/CATALOG SETUP SERVICES' },
+            { 
+              key: 'productdescription', // Unique key
+              label: 'PRODUCT DESCRIPTION WRITING SERVICES', // Label for menu
+              link: '/PRODUCT DESCRIPTION WRITING SERVICES' // Link to route
+            },
+            { 
+              key: 'productlisting', // Unique key
+              label: 'PRODUCT LISTING OPTIMIZATION', // Label for menu
+              link: '/PRODUCT LISTING OPTIMIZATION' // Link to route
+            },
+            { 
+              key: 'mainimage', // Unique key
+              label: 'MAIN IMAGE CTR HACK', // Label for menu
+              link: '/MAIN IMAGE CTR HACK' // Link to route
+            },
+            { 
+              key: 'updateandmaintenance', // Unique key
+              label: 'UPDATE AND MAINTENANCE', // Label for menu
+              link: '/UPDATE AND MAINTENANCE' // Link to route
+            }
+         
+          ],
+        },
+
+        
       ],
     },
     {
@@ -493,6 +613,8 @@ const Header = () => {
       children: [
         { key: 'boostSales', label: 'BOOST YOUR SALES', link: '/BOOST YOUR SALES' },
         { key: 'fbaWholesale', label: 'FBA WHOLESALE SERVICE', link: '/FBA WHOLESALE SERVICE' },
+        { key: 'productlaunch', label: 'PRODUCT LAUNCH SERVICE', link: '/PRODUCT LAUNCH SERVICE' },
+        { key: 'selleraccount', label: 'SELLER ACCOUNT MANAGEMENT SERVICE', link: '/SELLER ACCOUNT MANAGEMENT SERVICE' },
       ],
     },
   ];
@@ -574,77 +696,61 @@ const Header = () => {
       <Link to="/">
         <img src={StolidLogo} alt="StolidZone Logo" className="w-52" />
       </Link>
-<Menu 
+      <Menu
   mode="horizontal"
   className="flex-grow text-sm bg-transparent justify-center mt-12 font-bold"
   triggerSubMenuAction="hover"
 >
   {menuItems.map((item) => (
     item.children ? (
-      // SubMenu without arrow
       <SubMenu
-      style={{
-        wordWrap: 'break-word',
-        whiteSpace: 'normal',
-        maxWidth: '300px', 
-        overflowWrap: 'anywhere'// Adjust width to prevent overflow
-      }}
         key={item.key}
         title={item.title}
         icon={null}
+        style={{ wordWrap: 'break-word', whiteSpace: 'normal' }}
       >
         {item.children.map((subItem) => (
           subItem.children ? (
             <SubMenu
-            style={{
-              wordWrap: 'break-word',
-              whiteSpace: 'normal',
-              maxWidth: '300px', 
-              overflowWrap: 'anywhere'// Adjust width to prevent overflow
-            }}
               key={subItem.key}
               title={subItem.title}
-              className="font-bold"
+              style={{ wordWrap: 'break-word', whiteSpace: 'normal' }}
             >
               {subItem.children.map((child) => (
-                <Menu.Item
-                  key={child.key}
-                  className="font-bold"
-                  style={{
-                    wordWrap: 'break-word',
-                    whiteSpace: 'normal',
-                    maxWidth: '300px', 
-                    overflowWrap: 'anywhere'// Adjust width to prevent overflow
-                  }}
-                >
-                  <Link to={child.link}>{child.label}</Link>
-                </Menu.Item>
+                child.children ? (
+                  <SubMenu
+                    key={child.key}
+                    title={child.label}
+                    style={{ wordWrap: 'break-word', whiteSpace: 'normal' }}
+                  >
+                    {child.children.map((subChild) => (
+                      <Menu.Item key={subChild.key}>
+                        <Link to={subChild.link}>{subChild.label}</Link>
+                      </Menu.Item>
+                    ))}
+                  </SubMenu>
+                ) : (
+                  <Menu.Item key={child.key}>
+                    <Link to={child.link}>{child.label}</Link>
+                  </Menu.Item>
+                )
               ))}
             </SubMenu>
           ) : (
-            <Menu.Item
-              key={subItem.key}
-              className="font-bold"
-              style={{
-                wordWrap: 'break-word',
-                whiteSpace: 'normal',
-                maxWidth: '300px', 
-                overflowWrap: 'anywhere'// Adjust width to prevent overflow
-              }}
-            >
+            <Menu.Item key={subItem.key}>
               <Link to={subItem.link}>{subItem.label}</Link>
             </Menu.Item>
           )
         ))}
       </SubMenu>
     ) : (
-      // If the item has no children (like HOME), render it as a simple Menu.Item
       <Menu.Item key={item.key}>
         <Link to={item.link || "#"}>{item.title}</Link>
       </Menu.Item>
     )
   ))}
 </Menu>
+
 
 
       <div>

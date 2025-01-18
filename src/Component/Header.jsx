@@ -574,34 +574,78 @@ const Header = () => {
       <Link to="/">
         <img src={StolidLogo} alt="StolidZone Logo" className="w-52" />
       </Link>
-      <Menu mode="horizontal" className="flex-grow text-sm bg-transparent justify-center mt-12 font-bold" triggerSubMenuAction="hover">
+<Menu 
+  mode="horizontal"
+  className="flex-grow text-sm bg-transparent justify-center mt-12 font-bold"
+  triggerSubMenuAction="hover"
+>
   {menuItems.map((item) => (
     item.children ? (
-      <SubMenu key={item.key} title={item.title}>
+      // SubMenu without arrow
+      <SubMenu
+      style={{
+        wordWrap: 'break-word',
+        whiteSpace: 'normal',
+        maxWidth: '300px', 
+        overflowWrap: 'anywhere'// Adjust width to prevent overflow
+      }}
+        key={item.key}
+        title={item.title}
+        icon={null}
+      >
         {item.children.map((subItem) => (
           subItem.children ? (
-            <SubMenu key={subItem.key} title={subItem.title}>
+            <SubMenu
+            style={{
+              wordWrap: 'break-word',
+              whiteSpace: 'normal',
+              maxWidth: '300px', 
+              overflowWrap: 'anywhere'// Adjust width to prevent overflow
+            }}
+              key={subItem.key}
+              title={subItem.title}
+              className="font-bold"
+            >
               {subItem.children.map((child) => (
-                <Menu.Item key={child.key}>
+                <Menu.Item
+                  key={child.key}
+                  className="font-bold"
+                  style={{
+                    wordWrap: 'break-word',
+                    whiteSpace: 'normal',
+                    maxWidth: '300px', 
+                    overflowWrap: 'anywhere'// Adjust width to prevent overflow
+                  }}
+                >
                   <Link to={child.link}>{child.label}</Link>
                 </Menu.Item>
               ))}
             </SubMenu>
           ) : (
-            <Menu.Item key={subItem.key}>
+            <Menu.Item
+              key={subItem.key}
+              className="font-bold"
+              style={{
+                wordWrap: 'break-word',
+                whiteSpace: 'normal',
+                maxWidth: '300px', 
+                overflowWrap: 'anywhere'// Adjust width to prevent overflow
+              }}
+            >
               <Link to={subItem.link}>{subItem.label}</Link>
             </Menu.Item>
           )
         ))}
       </SubMenu>
     ) : (
-      // If the item has a link (like HOME), render it as a simple Menu.Item
+      // If the item has no children (like HOME), render it as a simple Menu.Item
       <Menu.Item key={item.key}>
         <Link to={item.link || "#"}>{item.title}</Link>
       </Menu.Item>
     )
   ))}
 </Menu>
+
 
       <div>
         <motion.div

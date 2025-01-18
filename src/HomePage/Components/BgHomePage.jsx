@@ -1,10 +1,12 @@
+// BgHomePage.js
 import BgHero from "../../assets/Images/BgHomePage.mp4";
 
 function BgHomePage() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
+      {/* Background Video */}
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-0 left-0 w-full h-full object-cover z-0"
         autoPlay
         loop
         muted
@@ -12,15 +14,17 @@ function BgHomePage() {
       >
         <source src={BgHero} type="video/mp4" />
       </video>
-      <div className="relative z-10 flex  items-center w-full h-full ml-80 -mt-24 bg-black bg-opacity-0">
+
+      {/* Content Overlay */}
+      <div className="relative z-10 flex items-center justify-center w-full h-full text-center">
         <div>
-      <h1 className="text-black text-7xl font-inter font-bold whitespace-normal ">
-  The Brand 
-</h1>
-<h1 className="text-black text-7xl font-inter font-bold whitespace-normal">
-   You Want Here!
-</h1>
-</div>
+          <h1 className="text-white text-7xl font-inter font-bold">
+            The Brand
+          </h1>
+          <h1 className="text-white text-7xl font-inter font-bold">
+            You Want Here!
+          </h1>
+        </div>
       </div>
     </div>
   );

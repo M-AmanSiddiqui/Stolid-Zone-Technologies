@@ -1,11 +1,13 @@
 
-import Header from "../Component/Header";  // Make sure the path is correct
+import Header from "../Component/Header";  
+import Footer from "../Component/Footer";// Make sure the path is correct
 import BgHomePage from "./Components/BgHomePage";
 function HomePage() {
   return (
     <div>
       <Header />
-      <BgHomePage />
+      
+      <BgHomePage /><Footer />
     </div>
   );
 }

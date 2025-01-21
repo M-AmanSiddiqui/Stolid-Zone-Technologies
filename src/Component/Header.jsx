@@ -657,8 +657,8 @@ const menuItems = [
     rel="noopener noreferrer"
     className="flex items-center gap-2 transform transition-transform duration-300 ease-in-out hover:scale-110"
   >
-    <FaFacebookF className="text-[#0006FF]" />
-    <span className="text-[#0006FF]">Facebook</span>
+    <FaFacebookF className="text-[#1877F2]" />
+    <span className="text-[#1877F2]">Facebook</span>
   </Link>
   <Link
     to="https://x.com/StolidzoneT"
@@ -675,8 +675,8 @@ const menuItems = [
     rel="noopener noreferrer"
     className="flex items-center gap-2 transform transition-transform duration-300 ease-in-out hover:scale-110"
   >
-    <FaLinkedinIn className="text-[#0006FF]" />
-    <span className="text-[#0006FF]">LinkedIn</span>
+    <FaLinkedinIn className="text-[#0A66C2]" />
+    <span className="text-[#0A66C2]">LinkedIn</span>
   </Link>
   <Link
     to="https://www.instagram.com/stolidzone_technologies/"
@@ -684,10 +684,10 @@ const menuItems = [
     rel="noopener noreferrer"
     className="flex items-center gap-2 transform transition-transform duration-300 ease-in-out hover:scale-110"
   >
-    <FaInstagram />
-    <span>Instagram</span>
+    <FaInstagram  className="text-[#E4405F]"/>
+    <span className="text-[#E4405F]">Instagram</span>
   </Link>
-</div>
+</div> 
 
       </div>
 

@@ -1,230 +1,3 @@
-// import { Link } from "react-router-dom";
-// import bgFooter from "../assets/Images/bgFooter.jpg";
-// import FooterLogo from "../assets/Images/StolidLogo.png"
-// import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
-// import { BsTwitterX} from "react-icons/bs"
-// import { MdLocationOn, MdCall, MdOutlineMailOutline, MdAccessTime } from "react-icons/md";
-// import { MdArrowOutward } from "react-icons/md";
-
-// const Footer = () => {
-//   return (
-// <div className="relative text-white p-56">
-//   {/* Background Image */}
-//   <img
-//     src={bgFooter}
-//     alt=""
-//     className="absolute top-0  left-0 w-full object-cover z-0 h-full"  // Adjust the background height to fit well
-//   />
-  
-//   <div className="relative z-10 mb-28 -mt-16 flex items-center space-x-64">
-//     <h2 className="text-5xl font-bold">Sign Up To Our Newsletter</h2>
-//     <div className="flex">
-//       <input
-//         type="email"
-//         placeholder="Email Address"
-//         className="px-8 ml-12 py-3 w-96 text-black rounded-full focus:outline-none"/>
-      
-//         <button className=" text-white  bg-blue-600 px-7 py-3 w-52 absolute right-0 top-0 rounded-full  flex hover:bg-black text-sm md:text-base font-bold group">
-//         Subscribe Now
-//                     <MdArrowOutward className=" ml-2 text-2xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
-//                   </button>
-//     </div>
-//   </div>
-
-//   {/* Footer Content */}
-//   <div className="relative z-10 bg-white   text-gray-500 rounded-2xl p-20 max-w-10xl  grid grid-cols-1 md:grid-cols-4 gap-12">
-//     {/* Newsletter Section */}
-//     <div className="border-r-2 border-gray-200">
-//       <img className="mb-4" src={FooterLogo} alt="" />
-//       <p>Our consulting services encompass a broad range, including strategic planning, operational efficiency…</p>
-//       <div className="flex gap-2 mt-6">
-     
-//       <Link
-//   to="https://www.facebook.com/stolidzonetechnologies"
-//   target="_blank"
-//   rel="noopener noreferrer"
-//   className="flex items-center gap-2 bg-gray-200 p-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
-// >
-//   <FaFacebookF className="text-[#1877F2]" />
-// </Link>
-
-// <Link
-//   to="https://x.com/StolidzoneT"
-//   target="_blank"
-//   rel="noopener noreferrer"
-//   className="flex items-center gap-2 bg-gray-200 p-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
-// >
-//   <BsTwitterX className="text-black" />
-// </Link>
-
-// <Link
-//   to="https://www.instagram.com/stolidzone_technologies/"
-//   target="_blank"
-//   rel="noopener noreferrer"
-//   className="flex items-center gap-2 bg-gray-200 p-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
-// >
-//   <FaLinkedinIn className="text-[#0A66C2]" />
-// </Link>
-
-// <Link
-//   to="https://www.instagram.com/stolidzone_technologies/"
-//   target="_blank"
-//   rel="noopener noreferrer"
-//   className="flex items-center gap-2 bg-gray-200 p-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
-// >
-//   <FaInstagram className="text-[#E4405F]" />
-// </Link>
-
-//   </div>
-//     </div>
-
-//     {/* About Section */}
-//     <div className="border-r-2 border-gray-200">
-//       <h2 className="text-xl font-bold mb-8 text-black">What We Do</h2>
-//       <ul className="space-y-4 font-semibold">
-//   <li>
-//     <Link
-//       to="/store-management"
-//       className="group flex items-center hover:text-blue-600 transition duration-300"
-//     >
-//       <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
-//       Store Management Services
-//     </Link>
-//   </li>
-//   <li>
-//     <Link
-//       to="/logistics"
-//       className="group flex items-center hover:text-blue-600 transition duration-300"
-//     >
-//       <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
-//       Logistics and Fulfillment Service
-//     </Link>
-//   </li>
-//   <li>
-//     <Link
-//       to="/brand-guidelines"
-//       className="group flex items-center hover:text-blue-600 transition duration-300"
-//     >
-//       <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
-//       Brand Guidelines
-//     </Link>
-//   </li>
-//   <li>
-//     <Link
-//       to="/store-front"
-//       className="group flex items-center hover:text-blue-600 transition duration-300"
-//     >
-//       <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
-//       Store Front and Branding
-//     </Link>
-//   </li>
-//   <li>
-//     <Link
-//       to="/account-suspension"
-//       className="group flex items-center hover:text-blue-600 transition duration-300"
-//     >
-//       <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
-//       Account Suspension
-//     </Link>
-//   </li>
-//   <li>
-//     <Link
-//       to="/product-launches"
-//       className="group flex items-center hover:text-blue-600 transition duration-300"
-//     >
-//       <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
-//       Product Launches
-//     </Link>
-//   </li>
-//   <li>
-//     <Link
-//       to="/ppc-marketing"
-//       className="group flex items-center hover:text-blue-600 transition duration-300"
-//     >
-//       <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
-//       PPC Marketing
-//     </Link>
-//   </li>
-// </ul>
-
-//     </div>
-
-//     {/* Quick Links Section */}
-//     <div className="border-r-2 border-gray-200">
-//       <h2 className="text-xl font-bold mb-8 text-black">Quick Links</h2>
-//       <ul className="space-y-4 font-semibold">
-//       <li>
-//     <Link
-//       to="/ppc-marketing"
-//       className="group flex items-center hover:text-blue-600 transition duration-300"
-//     >
-//       <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
-//       ABOUT
-//     </Link>
-//   </li>
-
-//   <li>
-//     <Link
-//       to="/ppc-marketing"
-//       className="group flex items-center hover:text-blue-600 transition duration-300"
-//     >
-//       <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
-//       CONTACT
-//     </Link>
-//   </li>
-//       </ul>
-//     </div>
-
-//     {/* Contact Section */}
-//     <div>
-//       <h2 className="text-xl font-bold mb-8 text-black">Company Address</h2>
-//       <ul className="space-y-3 font-semibold">
-//       <li className="flex items-center gap-2">
-//         <MdLocationOn className="text-blue-600" />
-//         <a
-//           href="https://www.google.com/maps?q=12501+Revere+Ave+Cleveland,+Ohio+44105"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           12501 Revere Ave Cleveland, Ohio 44105
-//         </a>
-//       </li>
-//       <li className="flex items-center gap-2">
-//         <MdCall className="text-blue-600" />
-//         <a href="tel:+14403749502">Call: +14403749502</a>
-//       </li>
-//       <li className="flex items-center gap-2">
-//         <MdOutlineMailOutline className="text-blue-600" />
-//         <a href="mailto:info@stolidzonetechnologies.com">
-//           info@stolidzonetechnologies.com
-//         </a>
-//       </li>
-//       <li className="flex items-center gap-2">
-//         <MdAccessTime className="text-blue-600" />
-//         Timing: 8:00am - 17:00pm
-//       </li>
-//     </ul>
-//     </div>
- 
-//     <div className="mt-12 flex justify-between items-center border-t border-gray-300 pt-4">
-//   <h1 className="whitespace-nowrap ml-12 text-sm text-gray-700">
-//     Copyright © Stolid Zone Technologies. All rights reserved 2024
-//   </h1>
-//   <h3 className="whitespace-nowrap mr-12 text-sm text-gray-700 flex items-center">
-//     <span>Terms of Use</span>
-//     <a href="#" className="ml-2 text-blue-600 underline">Privacy and Policy</a>
-//   </h3>
-// </div>
-
-
-
-//   </div>
-// </div>
-
-//   );
-// };
-
-// export default Footer;
 import { Link } from "react-router-dom";
 import bgFooter from "../assets/Images/bgFooter.jpg";
 import FooterLogo from "../assets/Images/StolidLogo.png";
@@ -248,17 +21,19 @@ const Footer = () => {
   <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center sm:text-left">
     Sign Up To Our Newsletter
   </h2>
-  <div className="flex flex-col sm:flex-row sm:items-center w-full sm:w-auto gap-4 sm:gap-0 ">
-    <input
-      type="email"
-      placeholder="Email Address"
-      className="px-8 py-3 w-full sm:w-[350px] md:w-[350px] lg:w-[400px] xl:w-[500px] text-black rounded-full focus:outline-none sm:mb-0 "
-    />
-    <button className="text-white  bg-blue-600 px-8 py-3 sm:px-6 sm:py-2 md:px-6 md:py-3 md:w-[200px] lg:w-[200px] xl:w-[250px] w-full rounded-full flex justify-center items-center hover:bg-black text-sm font-bold group sm:mt-0">
-      Subscribe Now
-      <MdArrowOutward className="ml-2 text-2xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
-    </button>
-  </div>
+<p className="bg-black">Subscribe to our Newsletter & Event right now to be updates</p>
+  <div className="flex flex-col sm:flex-row md:flex-row sm:items-center w-full  sm:w-auto gap-4 sm:gap-0">
+  <input
+    type="email"
+    placeholder="Email Address"
+    className="px-8 py-3 w-full sm:w-[300px] md:w-[350px] lg:w-[400px] xl:w-[500px] text-black rounded-full focus:outline-none sm:mb-4 md:mb-0"
+  />
+  <button className="text-white bg-blue-600 px-8 py-3 sm:flex-row sm:px-0 sm:py-3 md:px-6 md:py-3 sm-w-69 md:w-[200px] lg:w-[200px] xl:w-[250px] w-full rounded-full flex justify-center items-center hover:bg-black text-sm font-bold group sm:mt-4 md:mt-0">
+    Subscribe Now
+    <MdArrowOutward className="ml-2 text-2xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
+  </button>
+</div>
+
 </div>
 
 
@@ -272,12 +47,12 @@ const Footer = () => {
           <p className="text-sm sm:text-base">
             Our consulting services encompass a broad range, including strategic planning, operational efficiency…
           </p>
-          <div className="flex gap-2 mt-6">
+          <div className="flex gap-3 mt-6">
             <Link
               to="https://www.facebook.com/stolidzonetechnologies"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gray-200 md:p-1 p-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
+              className="flex items-center gap-2 bg-gray-200 md:p-1 p-3 lg:p-2 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
             >
               <FaFacebookF className="text-[#1877F2]" />
             </Link>
@@ -285,7 +60,7 @@ const Footer = () => {
               to="https://x.com/StolidzoneT"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gray-200 md:p-1 p-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
+              className="flex items-center gap-2 bg-gray-200 md:p-1 p-3 lg:p-2  rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
             >
               <BsTwitterX className="text-black" />
             </Link>
@@ -293,7 +68,7 @@ const Footer = () => {
               to="https://www.linkedin.com/company/stolidzonetechnologies/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gray-200 md:p-1 p-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
+              className="flex items-center gap-2 bg-gray-200 md:p-1 p-3 lg:p-2  rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
             >
               <FaLinkedinIn className="text-[#0A66C2]" />
             </Link>
@@ -301,7 +76,7 @@ const Footer = () => {
               to="https://www.instagram.com/stolidzone_technologies/"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gray-200 md:p-1 p-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
+              className="flex items-center gap-2 bg-gray-200 md:p-1 p-3 lg:p-2  rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
             >
               <FaInstagram className="text-[#E4405F]" />
             </Link>
@@ -310,7 +85,7 @@ const Footer = () => {
 
         {/* What We Do Section */}
         <div className=" sm:border-r-2 border-gray-200">
-          <h2 className="text-xl font-bold mb-8 text-black">What We Do</h2>
+          <h2 className="text-xl font-bold mb-8 text-black underline underline-offset-8">What We Do</h2>
           <ul className="space-y-4 font-semibold">
             <li>
               <Link
@@ -380,7 +155,7 @@ const Footer = () => {
 
         {/* Quick Links Section */}
         <div className="sm:border-r-2 border-gray-200">
-          <h2 className="text-xl font-bold mb-8 text-black">Quick Links</h2>
+          <h2 className="text-xl font-bold mb-8 text-black underline underline-offset-8">Quick Links</h2>
           <ul className="space-y-4 font-semibold">
             <li>
               <Link
@@ -406,9 +181,9 @@ const Footer = () => {
 
         {/* Contact Section */}
         <div>
-          <h2 className="text-xl font-bold mb-8 text-black">Company Address</h2>
+          <h2 className="text-xl font-bold mb-8 text-black underline underline-offset-8">Company Address</h2>
           <ul className="space-y-3 font-semibold">
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 hover:text-blue-500">
               <MdLocationOn className="text-blue-600 flex-shrink-0" />
               <Link
                 to="https://www.google.com/maps?q=12501+Revere+Ave+Cleveland,+Ohio+44105"
@@ -418,11 +193,11 @@ const Footer = () => {
                 12501 Revere Ave Cleveland, Ohio 44105
               </Link>
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 hover:text-blue-500">
               <MdCall className="text-blue-600" />
               <Link to="tel:+14403749502">Call: +14403749502</Link>
             </li>
-            <li className="flex items-center gap-2">
+            <li className="flex items-center gap-2 hover:text-blue-500">
   <MdOutlineMailOutline className="text-blue-600 flex-shrink-0" />
   <Link to="mailto:info@stolidzonetechnologies.com" className="overflow-hidden text-ellipsis whitespace-nowrap">
     info@stolidzonetechnologies.com
@@ -436,20 +211,22 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="w-full max-w-screen-xl mx-auto flex flex-col items-center lg:ml-96 mt-12 px-4 sm:px-8 gap-4 whitespace-nowrap">
-  <h1 className="font-bold text-sm sm:text-base text-center">
+   
+
+
+
+</div>
+<div className="relative w-full max-w-screen-xl mx-auto flex flex-col items-center justify-center mt-12 px-4 sm:px-8 gap-4 whitespace-nowrap">
+  <h1 className="font-bold text-sm sm:text-base md:text-lg lg:text-xl text-center">
     Copyright © Stolid Zone Technologies. All rights reserved 2024
   </h1>
-  <div className="flex gap-4 sm:gap-6 md:gap-8 lg:gap-10 justify-center">
-    <span>Terms of Use</span>
-    <Link className="text-blue-500 hover:underline">Privacy and Policy</Link>
+  <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 md:gap-8 lg:gap-10 justify-center text-center">
+    <span className="text-white hover:underline cursor-pointer">Terms of Use</span>
+    <Link className="text-white hover:underline cursor-pointer">Privacy and Policy</Link>
   </div>
 </div>
 
 
-
-
-</div>
   </div>
   );
 };

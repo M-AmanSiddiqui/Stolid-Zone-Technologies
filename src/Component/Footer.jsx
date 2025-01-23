@@ -221,7 +221,7 @@ const Footer = () => {
     Copyright © Stolid Zone Technologies. All rights reserved 2024
   </h1>
   <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 md:gap-8 lg:gap-10 justify-center text-center">
-    <span className="text-white hover:underline cursor-pointer">Terms of Use</span>
+    <span className="text-white ">Terms of Use</span>
     <Link className="text-white hover:underline cursor-pointer">Privacy and Policy</Link>
   </div>
 </div>

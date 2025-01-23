@@ -2,13 +2,13 @@
 import Header from "../Component/Header";  
 import Footer from "../Component/Footer";// Make sure the path is correct
 import BgHomePage from "./Components/BgHomePage";
-import HomeCard from "./Components/HomeCard";
+import Card from "./Components/Card";
 function HomePage() {
   return (
     <div>
       <Header />
       
-      <BgHomePage /><HomeCard /><Footer />
+      <BgHomePage /><Card /><Footer />
     </div>
   );
 }

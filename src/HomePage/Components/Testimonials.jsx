@@ -1,17 +1,52 @@
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
 import { FiSearch, FiUsers, FiBarChart2, FiBriefcase } from "react-icons/fi";
-import Testimonial1 from "../../assets/Images/Testimonial 1.webp"
-import Testimonial2 from "../../assets/Images/testimonial 2.webp"
-import Testimonial3 from "../../assets/Images/Testimonial 3.webp"
-import Testimonial4 from "../../assets/Images/Testimonial 4.webp"
-import Testimonial5 from "../../assets/Images/Testimonial 5.webp"
-import Testimonial6 from "../../assets/Images/Testimonial 6.webp"
-import Testimonial7 from "../../assets/Images/Testimonial 7.webp"
-import Testimonial8 from "../../assets/Images/Testimonial 8.webp"
-import Testimonial9 from "../../assets/Images/Testimonial 9.webp"
+import Testimonial1 from "../../assets/Images/Testimonial 1.webp";
+import Testimonial2 from "../../assets/Images/testimonial 2.webp";
+import Testimonial3 from "../../assets/Images/Testimonial 3.webp";
+import Testimonial4 from "../../assets/Images/Testimonial 4.webp";
+import Testimonial5 from "../../assets/Images/Testimonial 5.webp";
+import Testimonial6 from "../../assets/Images/Testimonial 6.webp";
+import Testimonial7 from "../../assets/Images/Testimonial 7.webp";
+import Testimonial8 from "../../assets/Images/Testimonial 8.webp";
+import Testimonial9 from "../../assets/Images/Testimonial 9.webp";
 import { MdArrowOutward } from "react-icons/md";
- function Testimonials() {
+import Slider from "react-slick";
+const settings = {
+    infinite: true,             // Ensures infinite loop of slides
+    speed: 800,                 // Transition speed (in ms) for a smooth animation (lower value for quicker transitions)
+    slidesToShow: 5,            // How many slides to show at once
+    slidesToScroll: 1,          // How many slides to scroll at a time
+    autoplay: true,             // Enables autoplay
+    autoplaySpeed: 1700,        // Time delay between slides in ms (should be lower than speed)
+    cssEase: "linear",          // Smooth and continuous transition (use 'linear' for smooth flow)
+    pauseOnHover: false,        // Disables pause when hovering over the carousel
+    arrows: false,              // Optional: Remove arrows for a cleaner look
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+  
+function Testimonials() {
   return (
     <div className="bg-gray-50 py-16 px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
@@ -29,8 +64,8 @@ import { MdArrowOutward } from "react-icons/md";
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Card 1 */}
           <div className="bg-white shadow-lg rounded-3xl p-12 transition-shadow">
-            <div className="flex hover:bg-blue-700 bg-blue-50 p-4 w-16 rounded-full mb-6">
-              <FiSearch className="w-8 h-8 text-blue-800 hover:text-white" />
+            <div className="flex hover:bg-blue-700 text-blue-800 hover:text-white bg-blue-50 p-4 w-16 rounded-full mb-6">
+              <FiSearch className="w-8 h-8  " />
             </div>
             <h3 className="text-xl font-bold mb-4">Strategic Solutions</h3>
             <p className="text-gray-500">
@@ -39,18 +74,17 @@ import { MdArrowOutward } from "react-icons/md";
             </p>
             <Link
               to="/growth-consultants"
-              className="text-blue-800 hover:text-black font-medium text-lg mt-8  group flex"
+              className="text-blue-800 hover:text-black font-medium text-lg mt-8 group flex"
             >
-              Read More 
-              
-             <MdArrowOutward className="ml-1 mt-1  text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
+              Read More
+              <MdArrowOutward className="ml-1 mt-1 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
             </Link>
           </div>
 
           {/* Card 2 */}
           <div className="bg-white shadow-lg rounded-3xl p-12 transition-shadow">
-          <div className="flex  hover:bg-blue-700  bg-blue-50 p-4 w-16 rounded-full mb-6">
-              <FiUsers className="w-8 h-8 text-blue-800 hover:text-white " />
+            <div className="flex hover:bg-blue-700 text-blue-800 hover:text-white bg-blue-50 p-4 w-16 rounded-full mb-6">
+              <FiUsers className="w-8 h-8"/>
             </div>
             <h3 className="text-xl font-bold mb-4">Growth Consultants</h3>
             <p className="text-gray-500">
@@ -59,18 +93,17 @@ import { MdArrowOutward } from "react-icons/md";
             </p>
             <Link
               to="/growth-consultants"
-              className="text-blue-800 hover:text-black font-medium text-lg mt-8  group flex"
+              className="text-blue-800 hover:text-black font-medium text-lg mt-8 group flex"
             >
-              Read More 
-              
-             <MdArrowOutward className="ml-1 mt-1  text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
+              Read More
+              <MdArrowOutward className="ml-1 mt-1 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
             </Link>
           </div>
 
           {/* Card 3 */}
           <div className="bg-white shadow-lg rounded-3xl p-12 transition-shadow">
-          <div className="flex hover:bg-blue-700  bg-blue-50 p-4 w-16 rounded-full mb-6">
-              <FiBarChart2 className="w-8 h-8 text-blue-800 hover:text-white" />
+            <div className="flex hover:bg-blue-700 text-blue-800 hover:text-white bg-blue-50 p-4 w-16 rounded-full mb-6">
+              <FiBarChart2 className="w-8 h-8 " />
             </div>
             <h3 className="text-xl font-bold mb-4">Market Research</h3>
             <p className="text-gray-500">
@@ -79,18 +112,17 @@ import { MdArrowOutward } from "react-icons/md";
             </p>
             <Link
               to="/growth-consultants"
-              className="text-blue-800 hover:text-black font-medium text-lg mt-8  group flex"
+              className="text-blue-800 hover:text-black font-medium text-lg mt-8 group flex"
             >
-              Read More 
-              
-             <MdArrowOutward className="ml-1 mt-1  text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
+              Read More
+              <MdArrowOutward className="ml-1 mt-1 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
             </Link>
           </div>
 
           {/* Card 4 */}
-           <div className="bg-white shadow-lg rounded-3xl p-12 transition-shadow">
-            <div className="flex hover:bg-blue-700  bg-blue-50 p-4 w-16 rounded-full mb-6">
-              <FiBriefcase className="w-8 h-8 text-blue-800 hover:text-white" />
+          <div className="bg-white shadow-lg rounded-3xl p-12 transition-shadow">
+            <div className="flex hover:bg-blue-700 text-blue-800 hover:text-white bg-blue-50 p-4 w-16 rounded-full mb-6">
+              <FiBriefcase className="w-8 h-8 " />
             </div>
             <h3 className="text-xl font-bold mb-4">Tax Management</h3>
             <p className="text-gray-500">
@@ -99,82 +131,71 @@ import { MdArrowOutward } from "react-icons/md";
             </p>
             <Link
               to="/growth-consultants"
-              className="text-blue-800 hover:text-black font-medium text-lg mt-8  group flex"
+              className="text-blue-800 hover:text-black font-medium text-lg mt-8 group flex"
             >
-              Read More 
-              
-             <MdArrowOutward className="ml-1 mt-1  text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
+              Read More
+              <MdArrowOutward className="ml-1 mt-1 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
             </Link>
           </div>
         </div>
 
         {/* Partners Section */}
         <div className="text-center mt-24">
-          <h3 className="text-4xl text-gray-600 font-bold mb-28">
+          <h3 className="text-3xl text-gray-600 font-bold mb-16">
             — Built on the Trust and Success of Our Partner Companies —
           </h3>
-          <motion.div
-            className="flex gap-8 justify-center items-center"
-            initial={{ x: 0 }}
-            animate={{ x: "-100%" }}
-            transition={{
-              duration: 15,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          >
+
+          <Slider {...settings} className="pb-28">
             <img
               src={Testimonial1}
               alt="Partner 1"
-              className="h-14 object-contain"
+              className="h-auto max-w-full object-contain"
             />
             <img
               src={Testimonial2}
               alt="Partner 2"
-              className="h-14 object-contain"
+              className="h-auto max-w-full object-contain"
             />
             <img
               src={Testimonial3}
               alt="Partner 3"
-              className="h-14 object-contain"
+              className="h-auto max-w-full object-contain"
             />
             <img
               src={Testimonial4}
               alt="Partner 4"
-              className="h-14 object-contain"
+              className="h-auto max-w-full object-contain"
             />
-              <img
+            <img
               src={Testimonial5}
               alt="Partner 5"
-              className="h-14 object-contain"
+              className="h-auto max-w-full object-contain"
             />
             <img
               src={Testimonial6}
               alt="Partner 6"
-              className="h-14 object-contain"
+              className="h-auto max-w-full object-contain"
             />
             <img
               src={Testimonial7}
               alt="Partner 7"
-              className="h-14 object-contain"
+              className="h-auto max-w-full object-contain"
             />
             <img
               src={Testimonial8}
               alt="Partner 8"
-              className="h-14 object-contain"
+              className="h-auto max-w-full object-contain"
             />
-             <img
+            <img
               src={Testimonial9}
               alt="Partner 9"
-              className="h-14 object-contain"
+              className="h-auto max-w-full object-contain"
             />
-
-          </motion.div>
+          </Slider>
         </div>
       </div>
     </div>
   );
 }
 
-
-export default  Testimonials;
+export default Testimonials;

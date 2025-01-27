@@ -4,8 +4,8 @@ import TeamWorking3 from "../../assets/Images/TeamWorking3.jpg";
 
 const SomeAnswer = () => {
   return (
-    <section className="bg-white py-16">
-      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 items-center gap-8">
+    <section className="bg-gray-100 py-16">
+      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 items-center gap-8 pb-16">
         {/* Left Side Content */}
         <div>
           <button className="text-sm font-medium text-blue-600 bg-blue-100 px-4 py-2 rounded-lg mb-4">
@@ -45,11 +45,11 @@ const SomeAnswer = () => {
 
         {/* Right Side Content */}
         <div className="relative">
-          <div className="absolute ml-80 -mt-14 text-black px-8 py-3 w-56 rounded-lg ">
+          {/* <div className="absolute ml-80 -mt-14 text-black px-8 py-3 w-56 rounded-lg ">
             <p className="text-7xl font-bold">68%</p>
             <p className="text-md font-semibold  px-3 mt-3">Extra Growth For <br /> Your Company</p>
-          </div>
-          <div className="grid grid-cols-2 gap-3">
+          </div> */}
+          <div className="grid grid-cols-2 gap-2">
             <img
               src={TeamWorking1}
               alt="Team working"
@@ -58,12 +58,12 @@ const SomeAnswer = () => {
             <img
               src={TeamWorking2}
               alt="Group discussion"
-              className="rounded-lg shadow-lg w-full h-56 object-cover mt-28"
+              className="rounded-lg shadow-lg w-full h-72 object-cover mt-28"
             />
             <img
               src={TeamWorking3}
               alt="Team collaboration"
-              className="rounded-lg shadow-lg w-full h-56 object-cover -mt-28"
+              className="rounded-lg shadow-lg w-full h-56 object-cover -mt-44"
             />
           </div>
         </div>

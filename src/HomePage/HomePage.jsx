@@ -7,12 +7,13 @@ import Agency from "./Components/Agency";
 import Testimonials from "./Components/Testimonials";
 import GlobalExpert from "./Components/GlobalExpert";
 import SomeAnswer from "./Components/SomeAnswer";
+import LatestNews from "./Components/LatestNews";
 function HomePage() {
   return (
     <div>
       <Header />
       
-      <BgHomePage /><Card /><Agency /><Testimonials /><GlobalExpert /><SomeAnswer /><Footer />
+      <BgHomePage /><Card /><Agency /><Testimonials /><GlobalExpert /><SomeAnswer /><LatestNews /><Footer />
     </div>
   );
 }

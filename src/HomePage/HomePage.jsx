@@ -5,12 +5,13 @@ import BgHomePage from "./Components/BgHomePage";
 import Card from "./Components/Card";
 import Agency from "./Components/Agency";
 import Testimonials from "./Components/Testimonials";
+import GlobalExpert from "./Components/GlobalExpert";
 function HomePage() {
   return (
     <div>
       <Header />
       
-      <BgHomePage /><Card /><Agency /><Testimonials /><Footer />
+      <BgHomePage /><Card /><Agency /><Testimonials /><GlobalExpert /><Footer />
     </div>
   );
 }

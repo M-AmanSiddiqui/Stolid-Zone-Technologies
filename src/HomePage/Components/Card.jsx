@@ -2,14 +2,14 @@ import {  FaLightbulb, FaChartBar, FaCog } from "react-icons/fa"; // Example ico
 
 function Card() {
   return (
-    <div className="py-32  bg-gray-200">
+    <div className="py-32  bg-gray-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Responsive Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {/* Card 1 */}
           <div className="bg-white shadow-md rounded-2xl lg:p-14 p-8 text-center">
             <div className="flex justify-center mb-4">
-            <div className="bg-gray-300 p-5 rounded-full hover:bg-blue-600 hover:text-white text-blue-600">   <FaCog className=" text-5xl" /></div>
+            <div className="bg-blue-50 p-5 rounded-full hover:bg-blue-600 hover:text-white text-blue-600">   <FaCog className=" text-5xl" /></div>
             </div>
             <h3 className="text-xl font-bold text-gray-800">
               Quality Client Services
@@ -23,7 +23,7 @@ function Card() {
           {/* Card 2 */}
           <div className="bg-white shadow-md rounded-2xl lg:p-14 p-8 text-center">
             <div className="flex justify-center mb-4">
-           <div className="bg-gray-300 p-5 rounded-full hover:bg-blue-600 hover:text-white text-blue-600">   <FaLightbulb className=" text-5xl" /></div>
+           <div className="bg-blue-50 p-5 rounded-full hover:bg-blue-600 hover:text-white text-blue-600">   <FaLightbulb className=" text-5xl" /></div>
             </div>
             <h3 className="text-xl font-bold text-gray-800">
               Unique Innovation Ideas
@@ -37,7 +37,7 @@ function Card() {
           {/* Card 3 */}
           <div className="bg-white shadow-md rounded-2xl lg:p-14 p-8 text-center">
             <div className="flex justify-center mb-4">
-            <div className="bg-gray-300 p-5 rounded-full hover:bg-blue-600 hover:text-white text-blue-600">   <FaChartBar className=" text-5xl" /></div>
+            <div className="bg-blue-50 p-5 rounded-full hover:bg-blue-600 hover:text-white text-blue-600">   <FaChartBar className=" text-5xl" /></div>
             </div>
             <h3 className="text-xl font-bold text-gray-800">
               Business Growth Manage

@@ -29,8 +29,8 @@ import { MdArrowOutward } from "react-icons/md";
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Card 1 */}
           <div className="bg-white shadow-lg rounded-3xl p-12 transition-shadow">
-            <div className="flex  bg-blue-50 p-4 w-16 rounded-full mb-6">
-              <FiSearch className="w-8 h-8 text-blue-800" />
+            <div className="flex hover:bg-blue-700 bg-blue-50 p-4 w-16 rounded-full mb-6">
+              <FiSearch className="w-8 h-8 text-blue-800 hover:text-white" />
             </div>
             <h3 className="text-xl font-bold mb-4">Strategic Solutions</h3>
             <p className="text-gray-500">
@@ -49,8 +49,8 @@ import { MdArrowOutward } from "react-icons/md";
 
           {/* Card 2 */}
           <div className="bg-white shadow-lg rounded-3xl p-12 transition-shadow">
-          <div className="flex  bg-blue-50 p-4 w-16 rounded-full mb-6">
-              <FiUsers className="w-8 h-8 text-blue-800" />
+          <div className="flex  hover:bg-blue-700  bg-blue-50 p-4 w-16 rounded-full mb-6">
+              <FiUsers className="w-8 h-8 text-blue-800 hover:text-white " />
             </div>
             <h3 className="text-xl font-bold mb-4">Growth Consultants</h3>
             <p className="text-gray-500">
@@ -69,8 +69,8 @@ import { MdArrowOutward } from "react-icons/md";
 
           {/* Card 3 */}
           <div className="bg-white shadow-lg rounded-3xl p-12 transition-shadow">
-          <div className="flex  bg-blue-50 p-4 w-16 rounded-full mb-6">
-              <FiBarChart2 className="w-8 h-8 text-blue-800" />
+          <div className="flex hover:bg-blue-700  bg-blue-50 p-4 w-16 rounded-full mb-6">
+              <FiBarChart2 className="w-8 h-8 text-blue-800 hover:text-white" />
             </div>
             <h3 className="text-xl font-bold mb-4">Market Research</h3>
             <p className="text-gray-500">
@@ -89,8 +89,8 @@ import { MdArrowOutward } from "react-icons/md";
 
           {/* Card 4 */}
            <div className="bg-white shadow-lg rounded-3xl p-12 transition-shadow">
-            <div className="flex  bg-blue-50 p-4 w-16 rounded-full mb-6">
-              <FiBriefcase className="w-8 h-8 text-blue-800" />
+            <div className="flex hover:bg-blue-700  bg-blue-50 p-4 w-16 rounded-full mb-6">
+              <FiBriefcase className="w-8 h-8 text-blue-800 hover:text-white" />
             </div>
             <h3 className="text-xl font-bold mb-4">Tax Management</h3>
             <p className="text-gray-500">
@@ -114,7 +114,7 @@ import { MdArrowOutward } from "react-icons/md";
             — Built on the Trust and Success of Our Partner Companies —
           </h3>
           <motion.div
-            className="flex gap-8 overflow-hidden"
+            className="flex gap-8 justify-center items-center"
             initial={{ x: 0 }}
             animate={{ x: "-100%" }}
             transition={{

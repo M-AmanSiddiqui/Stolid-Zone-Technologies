@@ -232,7 +232,7 @@ const menuItems = [
   
 
   return (
-    <header className="fixed top-0  left-0 w-full shadow-lg z-50 h-40 bg-transparent backdrop-blur-lg ">
+    <header className="fixed top-0  left-0 w-full shadow-lg z-50 h-40 bg-transparent backdrop-blur-lg overflow-hidden overflow-x-hidden">
 
 <div className="flex">
         <div className="flex flex-col md:flex-row gap-1 justify-center ml-96 mt-4 ">

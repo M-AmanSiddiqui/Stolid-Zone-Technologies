@@ -10,7 +10,7 @@ import SomeAnswer from "./Components/SomeAnswer";
 import LatestNews from "./Components/LatestNews";
 function HomePage() {
   return (
-    <div>
+    <div className="overflow-hidden overflow-x-hidden">
       <Header />
       
       <BgHomePage /><Card /><Agency /><Testimonials /><GlobalExpert /><SomeAnswer /><LatestNews /><Footer />

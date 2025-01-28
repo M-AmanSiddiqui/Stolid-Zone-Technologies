@@ -244,7 +244,7 @@ import { MdLocationOn, MdCall, MdOutlineMailOutline, MdAccessTime, MdArrowOutwar
 
 const Footer = () => {
   return (
-    <div className="relative text-white p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24">
+    <div className="relative text-white p-8 sm:p-12 md:p-16 lg:p-20 xl:p-24 overflow-hidden overflow-x-hidden">
       {/* Background Image */}
       <img
         src={bgFooter}

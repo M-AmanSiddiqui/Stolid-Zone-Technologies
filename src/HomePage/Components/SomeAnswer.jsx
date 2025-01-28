@@ -13,21 +13,23 @@ const SomeAnswer = () => {
             Get Some Question Answer
           </button>
           <motion.div
-  className="flex items-center space-x-4"
-  initial={{ x: -200, opacity: 0 }} // Start animation from the left
-  whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-  transition={{ duration: 0.9 }} // Animation duration
-> <h1 className="text-5xl font-bold text-gray-800 mb-6 leading-snug">
-            Share the joy of achieving <br />
-            glorious moments & climb up to the top
-          </h1>  </motion.div>
+            className="flex items-center space-x-4"
+            initial={{ x: -200, opacity: 0 }} // Start animation from the left
+            whileInView={{ x: 0, opacity: 1 }} // Animate to the center
+            transition={{ duration: 0.9 }} // Animation duration
+          >
+            <h1 className="text-5xl font-bold text-gray-800 mb-6 leading-snug">
+              Share the joy of achieving <br />
+              glorious moments & climb up to the top
+            </h1>
+          </motion.div>
           <div className="space-y-4">
             <details className="bg-gray-100 p-4 rounded-lg cursor-pointer">
               <summary className="font-medium text-lg text-gray-800">
                 What is the typical duration of a consulting engagement?
               </summary>
-              <p className="mt-2 text-gray-600 ">
-              The consultancy industry is constantly evolving, new trends, technologies, and methodologies emerging regularly. Staying ahead of these changes is crucial for a consultancy firm’s success.
+              <p className="mt-2 text-gray-600">
+                The consultancy industry is constantly evolving, with new trends, technologies, and methodologies emerging regularly. Staying ahead of these changes is crucial for a consultancy firm’s success.
               </p>
             </details>
             <details className="bg-gray-100 p-4 rounded-lg cursor-pointer">
@@ -35,7 +37,7 @@ const SomeAnswer = () => {
                 What types of businesses do you work with?
               </summary>
               <p className="mt-2 text-gray-600">
-              The consultancy industry is constantly evolving, new trends, technologies, and methodologies emerging regularly. Staying ahead of these changes is crucial for a consultancy firm’s success.
+                The consultancy industry is constantly evolving, with new trends, technologies, and methodologies emerging regularly. Staying ahead of these changes is crucial for a consultancy firm’s success.
               </p>
             </details>
             <details className="bg-gray-100 p-4 rounded-lg cursor-pointer">
@@ -43,7 +45,7 @@ const SomeAnswer = () => {
                 How is the working process simplified?
               </summary>
               <p className="mt-2 text-gray-600">
-              The consultancy industry is constantly evolving, new trends, technologies, and methodologies emerging regularly. Staying ahead of these changes is crucial for a consultancy firm’s success.
+                The consultancy industry is constantly evolving, with new trends, technologies, and methodologies emerging regularly. Staying ahead of these changes is crucial for a consultancy firm’s success.
               </p>
             </details>
           </div>
@@ -51,25 +53,25 @@ const SomeAnswer = () => {
 
         {/* Right Side Content */}
         <div className="relative">
-          {/* <div className="absolute ml-80 -mt-14 text-black px-8 py-3 w-56 rounded-lg ">
-            <p className="text-7xl font-bold">68%</p>
-            <p className="text-md font-semibold  px-3 mt-3">Extra Growth For <br /> Your Company</p>
-          </div> */}
-          <div className="grid grid-cols-2 gap-2">
-            <img
+          {/* Image Grid Section */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <motion.img
               src={TeamWorking1}
               alt="Team working"
               className="transform transition-transform duration-300 ease-in-out hover:scale-110 rounded-lg shadow-lg w-full h-56 object-cover"
+              whileHover={{ scale: 1.05 }}
             />
-            <img
+            <motion.img
               src={TeamWorking2}
               alt="Group discussion"
-              className="transform transition-transform duration-300 ease-in-out hover:scale-110 rounded-lg shadow-lg w-full h-72 object-cover mt-28"
+              className="transform transition-transform duration-300 ease-in-out hover:scale-110 rounded-lg shadow-lg w-full h-72 object-cover mt-12 lg:mt-24 sm:mt-0"
+              whileHover={{ scale: 1.05 }}
             />
-            <img
+            <motion.img
               src={TeamWorking3}
               alt="Team collaboration"
-              className="transform transition-transform duration-300 ease-in-out hover:scale-110 rounded-lg shadow-lg w-full h-56 object-cover -mt-44"
+              className="transform transition-transform duration-300 ease-in-out hover:scale-110 rounded-lg shadow-lg w-full h-56 object-cover mt-4 lg:-mt-40 sm:mt-0"
+              whileHover={{ scale: 1.05 }}
             />
           </div>
         </div>

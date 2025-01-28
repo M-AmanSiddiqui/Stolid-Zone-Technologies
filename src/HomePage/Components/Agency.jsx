@@ -84,7 +84,7 @@ function Agency() {
             </p>
             <motion.div
   className="flex items-center space-x-4"
-  initial={{ x: -300, opacity: 0 }} // Start animation from the left
+  initial={{ x: -200, opacity: 0 }} // Start animation from the left
   whileInView={{ x: 0, opacity: 1 }} // Animate to the center
   transition={{ duration: 0.7 }} // Animation duration
 >

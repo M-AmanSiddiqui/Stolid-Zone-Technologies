@@ -1,11 +1,11 @@
-import Expert1 from "../../assets/Images/expert1.jpeg";
-import Expert2 from "../../assets/Images/expert 2.webp";
+import Expert1 from "../../assets/Images/expert 10.jpg";
+import Expert2 from "../../assets/Images/expert2.jpg";
 import Expert3 from "../../assets/Images/expert 3.jpg";
-import Expert4 from "../../assets/Images/expert 4.jpg";
+import Expert4 from "../../assets/Images/expert4.jpg";
 import Expert5 from "../../assets/Images/expert 5.jpg";
-import Expert6 from "../../assets/Images/expert 6.webp";
-import Expert7 from "../../assets/Images/expert 7.webp";
-import Expert8 from "../../assets/Images/expert 8.webp";
+import Expert6 from "../../assets/Images/expert6.jpg";
+import Expert7 from "../../assets/Images/expert 11.jpg";
+import Expert8 from "../../assets/Images/expert8.jpg";
 import Slider from "react-slick";
 
 const settings = {
@@ -55,7 +55,7 @@ function GlobalExpert() {
             Meet Our Global Experts
           </h1>
         </div>
-        <Slider {...settings} className="pb-28">
+        <Slider {...settings} >
           <div className="px-4">
             <div className="relative bg-white rounded-2xl shadow-md overflow-hidden">
               <img

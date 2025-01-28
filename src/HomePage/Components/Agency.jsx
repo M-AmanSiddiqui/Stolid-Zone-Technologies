@@ -27,7 +27,12 @@ function Agency() {
         <div className="flex flex-col lg:flex-row mt-12 gap-8">
           {/* Left section */}
           <div className="lg:w-1/2 flex flex-col items-start gap-6">
-            <div className="flex items-center gap-4">
+          <motion.div
+  className="flex items-center space-x-4"
+  initial={{ y: -200, opacity: 0 }} // Start animation from the left
+  whileInView={{ y: 0, opacity: 1 }} // Animate to the center
+  transition={{ duration: 0.7 }} // Animation duration
+> <div className="flex items-center gap-4">
               <div className="bg-blue-700 p-3 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -47,9 +52,14 @@ function Agency() {
               <h3 className="text-lg font-medium text-gray-800">
                 Digital Right Business Consultant
               </h3>
-            </div>
+            </div></motion.div>
             <div className="flex items-center gap-4">
-              <div className="bg-blue-700 p-3 rounded-full">
+            <motion.div
+  className="flex items-center space-x-4"
+  initial={{ x: -200, opacity: 0 }} // Start animation from the left
+  whileInView={{ x: 0, opacity: 1 }} // Animate to the center
+  transition={{ duration: 0.7 }} // Animation duration
+>   <div className="bg-blue-700 p-3 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
@@ -68,7 +78,7 @@ function Agency() {
               <h3 className="text-lg font-medium text-gray-800">
                 Market Research & Analysis
               </h3>
-            </div>
+              </motion.div> </div>
             <p className="mt-4 text-gray-600 text-lg">
               Call to ask any question +14403749502
             </p>
@@ -93,12 +103,12 @@ function Agency() {
               <img
                 src={agency1}
                 alt="Team 2"
-                className="w-full rounded-2xl shadow-lg"
+                className="w-full rounded-2xl shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-110"
               />
               <img
                 src={agency3}
                 alt="Team 3"
-                className="w-full rounded-2xl shadow-lg"
+                className="w-full rounded-2xl shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-110"
               />
               
             </div>
@@ -106,12 +116,12 @@ function Agency() {
               <img
                 src={agency2}
                 alt="Team 2"
-                className="w-full rounded-2xl shadow-lg"
+                className="w-full rounded-2xl shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-110"
               />
               <img
                 src={agency4}
                 alt="Team 3"
-                className="w-full rounded-2xl shadow-lg"
+                className="w-full rounded-2xl shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-110"
               />
               
             </div>

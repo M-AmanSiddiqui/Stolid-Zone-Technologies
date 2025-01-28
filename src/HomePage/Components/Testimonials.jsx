@@ -11,6 +11,7 @@ import Testimonial8 from "../../assets/Images/Testimonial 8.webp";
 import Testimonial9 from "../../assets/Images/Testimonial 9.webp";
 import { MdArrowOutward } from "react-icons/md";
 import Slider from "react-slick";
+import { motion } from "framer-motion";
 const settings = {
     infinite: true,             // Ensures infinite loop of slides
     speed: 800,                 // Transition speed (in ms) for a smooth animation (lower value for quicker transitions)
@@ -63,8 +64,14 @@ function Testimonials() {
         {/* Cards Section */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Card 1 */}
-          <div className="bg-white shadow-lg rounded-3xl p-12 transition-shadow">
-            <div className="flex hover:bg-blue-700 text-blue-800 hover:text-white bg-blue-50 p-4 w-16 rounded-full mb-6">
+          <motion.div
+  className="flex items-center space-x-4"
+  initial={{ x: -200, opacity: 0 }} // Start animation from the left
+  whileInView={{ x: 0, opacity: 1 }} // Animate to the center
+  transition={{ duration: 0.9 }} // Animation duration
+>
+          <div className="bg-white shadow-lg rounded-3xl p-12 transform transition-transform duration-300 ease-in-out hover:scale-110">
+            <div className="flex hover:bg-blue-700 text-blue-800 hover:text-white bg-blue-50 p-4 w-16 rounded-full mb-6 ">
               <FiSearch className="w-8 h-8  " />
             </div>
             <h3 className="text-xl font-bold mb-4">Strategic Solutions</h3>
@@ -80,9 +87,15 @@ function Testimonials() {
               <MdArrowOutward className="ml-1 mt-1 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
             </Link>
           </div>
-
+          </motion.div>
           {/* Card 2 */}
-          <div className="bg-white shadow-lg rounded-3xl p-12 transition-shadow">
+          <motion.div
+  className="flex items-center space-x-4"
+  initial={{ y: -200, opacity: 0 }} // Start animation from the left
+  whileInView={{ y: 0, opacity: 1 }} // Animate to the center
+  transition={{ duration: 0.9 }} // Animation duration
+>
+          <div className="bg-white shadow-lg rounded-3xl p-12  transform transition-transform duration-300 ease-in-out hover:scale-110">
             <div className="flex hover:bg-blue-700 text-blue-800 hover:text-white bg-blue-50 p-4 w-16 rounded-full mb-6">
               <FiUsers className="w-8 h-8"/>
             </div>
@@ -99,9 +112,15 @@ function Testimonials() {
               <MdArrowOutward className="ml-1 mt-1 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
             </Link>
           </div>
-
+          </motion.div>
           {/* Card 3 */}
-          <div className="bg-white shadow-lg rounded-3xl p-12 transition-shadow">
+          <motion.div
+  className="flex items-center space-x-4"
+  initial={{ y: 200, opacity: 0 }} // Start animation from the left
+  whileInView={{ y: 0, opacity: 1 }} // Animate to the center
+  transition={{ duration: 0.9 }} // Animation duration
+>
+          <div className="bg-white shadow-lg rounded-3xl p-12 transform transition-transform duration-300 ease-in-out hover:scale-110">
             <div className="flex hover:bg-blue-700 text-blue-800 hover:text-white bg-blue-50 p-4 w-16 rounded-full mb-6">
               <FiBarChart2 className="w-8 h-8 " />
             </div>
@@ -118,9 +137,15 @@ function Testimonials() {
               <MdArrowOutward className="ml-1 mt-1 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
             </Link>
           </div>
-
+          </motion.div>
           {/* Card 4 */}
-          <div className="bg-white shadow-lg rounded-3xl p-12 transition-shadow">
+          <motion.div
+  className="flex items-center space-x-4"
+  initial={{ x: 200, opacity: 0 }} // Start animation from the left
+  whileInView={{ x: 0, opacity: 1 }} // Animate to the center
+  transition={{ duration: 0.9 }} // Animation duration
+>
+          <div className="bg-white shadow-lg rounded-3xl p-12 transform transition-transform duration-300 ease-in-out hover:scale-110">
             <div className="flex hover:bg-blue-700 text-blue-800 hover:text-white bg-blue-50 p-4 w-16 rounded-full mb-6">
               <FiBriefcase className="w-8 h-8 " />
             </div>
@@ -137,7 +162,7 @@ function Testimonials() {
               <MdArrowOutward className="ml-1 mt-1 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
             </Link>
           </div>
-        </div>
+          </motion.div> </div>
 
         {/* Partners Section */}
         <div className="text-center mt-24">
@@ -145,7 +170,7 @@ function Testimonials() {
             — Built on the Trust and Success of Our Partner Companies —
           </h3>
 
-          <Slider {...settings} className="pb-28">
+          <Slider {...settings} className="pb-28 ">
             <img
               src={Testimonial1}
               alt="Partner 1"

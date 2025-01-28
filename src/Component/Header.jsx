@@ -315,6 +315,7 @@ const menuItems = [
   {menuItems.map((item) => (
     item.children ? (
       <SubMenu
+      className="font-bold"
         key={item.key}
         title={item.title}
         icon={null}
@@ -323,6 +324,7 @@ const menuItems = [
         {item.children.map((subItem) => (
           subItem.children ? (
             <SubMenu
+            className="font-bold"
               key={subItem.key}
               title={subItem.title}
               style={{ wordWrap: 'break-word', whiteSpace: 'normal' }}
@@ -330,32 +332,33 @@ const menuItems = [
               {subItem.children.map((child) => (
                 child.children ? (
                   <SubMenu
+                  className="font-bold"
                     key={child.key}
                     title={child.label}
                     style={{ wordWrap: 'break-word', whiteSpace: 'normal' }}
                   >
                     {child.children.map((subChild) => (
-                      <Menu.Item key={subChild.key}>
+                      <Menu.Item key={subChild.key} className="font-bold">
                         <Link to={subChild.link}>{subChild.label}</Link>
                       </Menu.Item>
                     ))}
                   </SubMenu>
                 ) : (
-                  <Menu.Item key={child.key}>
+                  <Menu.Item key={child.key} className="font-bold">
                     <Link to={child.link}>{child.label}</Link>
                   </Menu.Item>
                 )
               ))}
             </SubMenu>
           ) : (
-            <Menu.Item key={subItem.key}>
+            <Menu.Item key={subItem.key} className="font-bold">
               <Link to={subItem.link}>{subItem.label}</Link>
             </Menu.Item>
           )
         ))}
       </SubMenu>
     ) : (
-      <Menu.Item key={item.key}>
+      <Menu.Item key={item.key} className="font-bold">  
         <Link to={item.link || "#"}>{item.title}</Link>
       </Menu.Item>
     )

@@ -1,6 +1,7 @@
 import TeamWorking1 from "../../assets/Images/TeamWorking1.jpg"; 
 import TeamWorking2 from "../../assets/Images/TeamWorking2.jpg"; 
 import TeamWorking3 from "../../assets/Images/TeamWorking3.jpg"; 
+import { motion } from "framer-motion";
 
 const SomeAnswer = () => {
   return (
@@ -11,10 +12,15 @@ const SomeAnswer = () => {
           <button className="text-sm font-medium text-blue-600 bg-blue-100 px-4 py-2 rounded-lg mb-4">
             Get Some Question Answer
           </button>
-          <h1 className="text-5xl font-bold text-gray-800 mb-6 leading-snug">
+          <motion.div
+  className="flex items-center space-x-4"
+  initial={{ x: -200, opacity: 0 }} // Start animation from the left
+  whileInView={{ x: 0, opacity: 1 }} // Animate to the center
+  transition={{ duration: 0.9 }} // Animation duration
+> <h1 className="text-5xl font-bold text-gray-800 mb-6 leading-snug">
             Share the joy of achieving <br />
             glorious moments & climb up to the top
-          </h1>
+          </h1>  </motion.div>
           <div className="space-y-4">
             <details className="bg-gray-100 p-4 rounded-lg cursor-pointer">
               <summary className="font-medium text-lg text-gray-800">
@@ -53,17 +59,17 @@ const SomeAnswer = () => {
             <img
               src={TeamWorking1}
               alt="Team working"
-              className="rounded-lg shadow-lg w-full h-56 object-cover"
+              className="transform transition-transform duration-300 ease-in-out hover:scale-110 rounded-lg shadow-lg w-full h-56 object-cover"
             />
             <img
               src={TeamWorking2}
               alt="Group discussion"
-              className="rounded-lg shadow-lg w-full h-72 object-cover mt-28"
+              className="transform transition-transform duration-300 ease-in-out hover:scale-110 rounded-lg shadow-lg w-full h-72 object-cover mt-28"
             />
             <img
               src={TeamWorking3}
               alt="Team collaboration"
-              className="rounded-lg shadow-lg w-full h-56 object-cover -mt-44"
+              className="transform transition-transform duration-300 ease-in-out hover:scale-110 rounded-lg shadow-lg w-full h-56 object-cover -mt-44"
             />
           </div>
         </div>

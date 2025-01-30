@@ -7,7 +7,7 @@ function BgHomePage() {
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Video */}
       <video
-        className="absolute top-16 sm:top-14 left-0 w-full h-full object-cover z-0"
+        className="absolute top-14 sm:top-14 left-0 w-full h-full object-cover z-0"
         autoPlay
         loop
         muted

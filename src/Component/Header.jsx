@@ -642,40 +642,40 @@ const ResponsiveMenu = () => {
   
     <div className="flex justify-between items-center -mt-3 px-8">
       <Link to="/" className="flex  md:justify-start sm:justify-start w-full">
-        <img src={StolidLogo} alt="StolidZone Logo" className="w-20 sm:w-32 -ml-7  md:w-52 max-w-44 h-auto" />
+        <img src={StolidLogo} alt="StolidZone Logo" className="w-28 sm:w-32 -ml-7  md:w-52 max-w-44 h-auto" />
       </Link>
   
       {/* Desktop Menu */}
-      <div className="hidden sm:block justify-start">
-        <Menu mode="horizontal" className="text-sm bg-transparent flex mt-6 font-bold" triggerSubMenuAction="hover">
-          {menuItems.map((item) =>
-            item.children ? (
-              <Menu.SubMenu className="font-bold" key={item.key} title={item.title} icon={null}>
-                {item.children.map((subItem) =>
-                  subItem.children ? (
-                    <Menu.SubMenu key={subItem.key} title={subItem.title}>
-                      {subItem.children.map((child) => (
-                        <Menu.Item key={child.key} className="font-bold">
-                          <Link to={child.link}>{child.label}</Link>
-                        </Menu.Item>
-                      ))}
-                    </Menu.SubMenu>
-                  ) : (
-                    <Menu.Item key={subItem.key} className="font-bold">
-                      <Link to={subItem.link}>{subItem.label}</Link>
-                    </Menu.Item>
-                  )
-                )}
+      <div className="hidden sm:block w-full  justify-center">
+  <Menu mode="horizontal" className="text-sm bg-transparent mt-6 font-bold" triggerSubMenuAction="hover">
+    {menuItems.map((item) =>
+      item.children ? (
+        <Menu.SubMenu className="font-bold" key={item.key} title={item.title} icon={null}>
+          {item.children.map((subItem) =>
+            subItem.children ? (
+              <Menu.SubMenu key={subItem.key} title={subItem.title}>
+                {subItem.children.map((child) => (
+                  <Menu.Item key={child.key} className="font-bold">
+                    <Link to={child.link}>{child.label}</Link>
+                  </Menu.Item>
+                ))}
               </Menu.SubMenu>
             ) : (
-              <Menu.Item key={item.key} className="font-bold">
-                <Link to={item.link || "#"}>{item.title}</Link>
+              <Menu.Item key={subItem.key} className="font-bold">
+                <Link to={subItem.link}>{subItem.label}</Link>
               </Menu.Item>
             )
           )}
-        </Menu>
-      </div>
-  
+        </Menu.SubMenu>
+      ) : (
+        <Menu.Item key={item.key} className="font-bold">
+          <Link to={item.link || "#"}>{item.title}</Link>
+        </Menu.Item>
+      )
+    )}
+  </Menu>
+</div>
+
       {/* Mobile Menu */}
       <div className="block sm:hidden  md:hidden">
         <button onClick={toggleDrawer} className="p-2">

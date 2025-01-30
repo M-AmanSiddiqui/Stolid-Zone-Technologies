@@ -56,8 +56,8 @@ function Agency() {
             <div className="flex items-center gap-4">
             <motion.div
   className="flex items-center space-x-4"
-  initial={{ x: -300, opacity: 0 }} // Start animation from the left
-  whileInView={{ x: 0, opacity: 1 }} // Animate to the center
+  initial={{ y: 300, opacity: 0 }} // Start animation from the left
+  whileInView={{ y: 0, opacity: 1 }} // Animate to the center
   transition={{ duration: 0.7 }} // Animation duration
 >   <div className="bg-blue-700 p-3 rounded-full">
                 <svg
@@ -84,17 +84,18 @@ function Agency() {
             </p>
             <motion.div
   className="flex items-center space-x-4"
-  initial={{ x: -300, opacity: 0 }} // Start animation from the left
-  whileInView={{ x: 0, opacity: 1 }} // Animate to the center
-  transition={{ duration: 0.7 }} // Animation duration
+  initial={{ y: -300, opacity: 0 }} // Start animation from the left
+  whileInView={{ y: 0, opacity: 1 }} // Animate to the center
+ 
 >
- <Link to="/appointment">
-            <button className="bg-blue-600 text-white px-9 py-4 mt-12 rounded-full flex hover:bg-black text-sm md:text-base font-bold group">
-              For An Appointment
-              <MdArrowOutward className=" ml-2 text-2xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
-            </button>
-          </Link>
-        </motion.div>
+  <Link to="/appointment">
+    <button className="bg-blue-600 text-white px-9 py-4 mt-12 rounded-full flex hover:bg-black text-sm md:text-base font-bold group">
+      For An Appointment
+      <MdArrowOutward className="ml-2 text-2xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
+    </button>
+  </Link>
+</motion.div>
+
           </div>
 
           {/* Right section */}

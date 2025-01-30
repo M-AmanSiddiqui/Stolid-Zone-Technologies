@@ -443,9 +443,10 @@ const Footer = () => {
 
       {/* Copyright Section */}
       <div className="relative w-full max-w-screen-xl mx-auto flex flex-col items-center justify-center mt-12 px-4 sm:px-8 gap-4 whitespace-nowrap">
-        <h1 className="font-bold text-sm sm:text-base md:text-lg lg:text-xl text-center">
-          Copyright © Stolid Zone Technologies. All rights reserved 2024
-        </h1>
+      <h1 className="font-bold text-xs sm:text-sm md:text-lg lg:text-xl text-center">
+  Copyright © Stolid Zone Technologies. All rights reserved 2024
+</h1>
+
         <div className="flex flex-col sm:flex-row gap-2 sm:gap-6 md:gap-8 lg:gap-10 justify-center text-center">
           <span className="text-white">Terms of Use</span>
           <Link className="text-white hover:underline cursor-pointer">Privacy and Policy</Link>

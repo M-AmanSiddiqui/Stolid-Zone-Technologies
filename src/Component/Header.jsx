@@ -636,13 +636,13 @@ const ResponsiveMenu = () => {
   ];
   return (
     <header className="fixed top-0 left-0 w-full shadow-lg bg-white z-50 bg-transparent backdrop-blur-lg overflow-hidden overflow-x-hidden">
-    <div className="flex flex-col md:flex-row items-center justify-center max-w-screen-xl mx-auto px-4 py-3 ">
+    <div className="flex flex-col md:flex-row items-center justify-center max-w-screen-xl mx-auto px-4 py-3 sm:py-1 ">
    
     </div>
   
     <div className="flex justify-between items-center -mt-3 px-8">
       <Link to="/" className="flex  md:justify-start sm:justify-start w-full">
-        <img src={StolidLogo} alt="StolidZone Logo" className="w-32 sm:w-32 sm:-ml-5 md:w-52 max-w-44 h-auto" />
+        <img src={StolidLogo} alt="StolidZone Logo" className="w-32 sm:w-32 sm:-ml-5 md:-ml-5 md:w-52 max-w-44 h-auto" />
       </Link>
   
       {/* Desktop Menu */}

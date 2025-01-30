@@ -48,7 +48,7 @@ function BgHomePage() {
         </motion.p>
 
         {/* Buttons */}
-        <motion.div
+        {/* <motion.div
           className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4"
           initial={{ x: -300, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
@@ -62,7 +62,23 @@ function BgHomePage() {
             Our Services
             <MdArrowOutward className="ml-2 text-2xl transform group-hover:rotate-45 transition-transform duration-300" />
           </button>
-        </motion.div>
+        </motion.div> */}
+
+        <motion.div
+  className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 "
+  initial={{ x: -300, opacity: 0 }}
+  whileInView={{ x: 0, opacity: 1 }}
+  transition={{ duration: 0.7 }}
+>
+  <button className="w-full sm:w-auto px-9 py-4 rounded-full flex bg-blue-600 text-white text-sm sm:text-base font-semibold group">
+    Make An Appointment
+    <MdArrowOutward className="ml-2 text-2xl transform group-hover:rotate-45 transition-transform duration-300" />
+  </button>
+  <button className="w-full sm:w-auto text-blue-600 bg-white px-8 py-4 rounded-full flex hover:bg-blue-600 hover:text-white text-sm sm:text-base font-semibold group">
+    Our Services
+    <MdArrowOutward className="ml-2 text-2xl transform group-hover:rotate-45 transition-transform duration-300" />
+  </button>
+</motion.div>
       </div>
     </div>
   );

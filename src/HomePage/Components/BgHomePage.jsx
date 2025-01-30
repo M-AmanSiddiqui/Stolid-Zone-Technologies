@@ -47,9 +47,9 @@ function BgHomePage() {
           our consulting services in this domain are designed to ensure.
         </motion.p>
 
-        {/* Buttons */}
-        <motion.div
-  className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full "
+       {/* Buttons */}
+<motion.div
+  className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 w-full"
   initial={{ x: -300, opacity: 0 }}
   whileInView={{ x: 0, opacity: 1 }}
   transition={{ duration: 0.7 }}
@@ -58,11 +58,12 @@ function BgHomePage() {
     Make An Appointment
     <MdArrowOutward className="ml-2 text-2xl transform group-hover:rotate-45 transition-transform duration-300" />
   </button>
-  <button className=" sm:w-64  text-blue-600 bg-white px-8 py-4 rounded-full flex hover:bg-blue-600 hover:text-white text-sm sm:text-base font-semibold group">
+  <button className="sm:w-52 text-blue-600 bg-white px-8 py-4 rounded-full flex hover:bg-blue-600 hover:text-white text-sm sm:text-base font-semibold group">
     Our Services
     <MdArrowOutward className="ml-2 text-2xl transform group-hover:rotate-45 transition-transform duration-300" />
   </button>
 </motion.div>
+
 
 
         {/* <motion.div

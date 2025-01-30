@@ -635,18 +635,18 @@ const ResponsiveMenu = () => {
     },
   ];
   return (
-    <header className="fixed top-0 left-0 w-full shadow-lg bg-white z-50 bg-transparent backdrop-blur-lg overflow-hidden overflow-x-hidden">
+    <header className="fixed top-0 left-0 w-full shadow-lg bg-black z-50 bg-transparent backdrop-blur-lg overflow-hidden overflow-x-hidden">
     <div className="flex flex-col md:flex-row items-center justify-center max-w-screen-xl mx-auto  py-3 ">
    
     </div>
   
     <div className="flex justify-between items-center -mt-3 px-8">
       <Link to="/" className="flex  md:justify-start sm:justify-start w-full">
-        <img src={StolidLogo} alt="StolidZone Logo" className="w-28 sm:w-32 ml-20  md:w-52 max-w-44 h-auto" />
+        <img src={StolidLogo} alt="StolidZone Logo" className="w-28 sm:w-32 md:w-52 max-w-44 h-auto" />
       </Link>
   
       {/* Desktop Menu */}
-      <div className="hidden sm:block w-full  justify-center">
+      <div className="hidden sm:block w-full  justify-center -ml-96">
   <Menu mode="horizontal" className="text-sm bg-transparent mt-6 font-bold" triggerSubMenuAction="hover">
     {menuItems.map((item) =>
       item.children ? (

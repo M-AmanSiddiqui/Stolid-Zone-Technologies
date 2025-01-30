@@ -642,7 +642,7 @@ const ResponsiveMenu = () => {
   
     <div className="flex justify-between items-center -mt-3 px-8">
       <Link to="/" className="flex  md:justify-start sm:justify-start w-full">
-        <img src={StolidLogo} alt="StolidZone Logo" className="w-28 sm:w-32 -ml-7  md:w-52 max-w-44 h-auto" />
+        <img src={StolidLogo} alt="StolidZone Logo" className="w-28 sm:w-32 ml-20  md:w-52 max-w-44 h-auto" />
       </Link>
   
       {/* Desktop Menu */}

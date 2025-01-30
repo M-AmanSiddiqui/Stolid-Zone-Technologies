@@ -7,7 +7,7 @@ function BgHomePage() {
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Video */}
       <video
-        className="absolute top-0 left-0 w-full h-full object-cover z-0"
+        className="absolute top-20 sm:top-20 left-0 w-full h-full object-cover z-0"
         autoPlay
         loop
         muted
@@ -54,7 +54,7 @@ function BgHomePage() {
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
         >
-          <button className="text-blue-600 bg-white px-9 py-4 rounded-full flex hover:bg-blue-600 hover:text-white text-sm sm:text-base font-semibold group">
+          <button className="px-9 py-4 rounded-full flex bg-blue-600 text-white text-sm sm:text-base font-semibold group">
             Make An Appointment
             <MdArrowOutward className="ml-2 text-2xl transform group-hover:rotate-45 transition-transform duration-300" />
           </button>

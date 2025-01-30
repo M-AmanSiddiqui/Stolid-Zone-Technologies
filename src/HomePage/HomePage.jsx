@@ -1,4 +1,3 @@
-
 import Header from "../Component/Header";  
 import Footer from "../Component/Footer";// Make sure the path is correct
 import BgHomePage from "./Components/BgHomePage";

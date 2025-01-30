@@ -54,11 +54,11 @@ function BgHomePage() {
   whileInView={{ x: 0, opacity: 1 }}
   transition={{ duration: 0.7 }}
 >
-  <button className="w-full sm:w-auto px-9 py-4 rounded-full flex bg-blue-600 text-white text-sm sm:text-base font-semibold group">
+  <button className="sm:w-72 px-9 py-4 rounded-full flex bg-blue-600 text-white text-sm sm:text-base font-semibold group">
     Make An Appointment
     <MdArrowOutward className="ml-2 text-2xl transform group-hover:rotate-45 transition-transform duration-300" />
   </button>
-  <button className="w-full sm:w-auto text-blue-600 bg-white px-8 py-4 rounded-full flex hover:bg-blue-600 hover:text-white text-sm sm:text-base font-semibold group">
+  <button className=" sm:w-64  text-blue-600 bg-white px-8 py-4 rounded-full flex hover:bg-blue-600 hover:text-white text-sm sm:text-base font-semibold group">
     Our Services
     <MdArrowOutward className="ml-2 text-2xl transform group-hover:rotate-45 transition-transform duration-300" />
   </button>

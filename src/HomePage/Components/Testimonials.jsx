@@ -295,7 +295,7 @@ function Testimonials() {
           {/* Card 1 */}
           <motion.div
             className="flex items-center space-x-4"
-            initial={{ x: -200, opacity: 0 }}
+            initial={{ x: -300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.9 }}
           >
@@ -321,7 +321,7 @@ function Testimonials() {
           {/* Card 2 */}
           <motion.div
             className="flex items-center space-x-4"
-            initial={{ y: -200, opacity: 0 }}
+            initial={{ y: -300, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.9 }}
           >
@@ -347,7 +347,7 @@ function Testimonials() {
           {/* Card 3 */}
           <motion.div
             className="flex items-center space-x-4"
-            initial={{ y: 200, opacity: 0 }}
+            initial={{ y: 300, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.9 }}
           >
@@ -373,7 +373,7 @@ function Testimonials() {
           {/* Card 4 */}
           <motion.div
             className="flex items-center space-x-4"
-            initial={{ x: 200, opacity: 0 }}
+            initial={{ x: 300, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.9 }}
           >

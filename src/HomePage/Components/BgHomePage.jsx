@@ -50,7 +50,7 @@ function BgHomePage() {
         {/* Buttons */}
         <motion.div
           className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4"
-          initial={{ x: -200, opacity: 0 }}
+          initial={{ x: -300, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7 }}
         >

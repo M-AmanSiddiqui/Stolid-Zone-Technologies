@@ -29,7 +29,7 @@ function Agency() {
           <div className="lg:w-1/2 flex flex-col items-start gap-6">
           <motion.div
   className="flex items-center space-x-4"
-  initial={{ y: -200, opacity: 0 }} // Start animation from the left
+  initial={{ y: -300, opacity: 0 }} // Start animation from the left
   whileInView={{ y: 0, opacity: 1 }} // Animate to the center
   transition={{ duration: 0.7 }} // Animation duration
 > <div className="flex items-center gap-4">
@@ -56,7 +56,7 @@ function Agency() {
             <div className="flex items-center gap-4">
             <motion.div
   className="flex items-center space-x-4"
-  initial={{ x: -200, opacity: 0 }} // Start animation from the left
+  initial={{ x: -300, opacity: 0 }} // Start animation from the left
   whileInView={{ x: 0, opacity: 1 }} // Animate to the center
   transition={{ duration: 0.7 }} // Animation duration
 >   <div className="bg-blue-700 p-3 rounded-full">
@@ -84,7 +84,7 @@ function Agency() {
             </p>
             <motion.div
   className="flex items-center space-x-4"
-  initial={{ x: -200, opacity: 0 }} // Start animation from the left
+  initial={{ x: -300, opacity: 0 }} // Start animation from the left
   whileInView={{ x: 0, opacity: 1 }} // Animate to the center
   transition={{ duration: 0.7 }} // Animation duration
 >

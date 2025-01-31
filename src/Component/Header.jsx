@@ -637,132 +637,34 @@ const ResponsiveMenu = () => {
   return (
     <header className="fixed top-0 left-0 w-full shadow-lg bg-black z-50 bg-transparent backdrop-blur-lg overflow-hidden overflow-x-hidden">
     <div className="flex flex-col md:flex-row items-center justify-center max-w-screen-xl mx-auto  py-3 ">
-   
-    </div>
-  
-    <div className="flex justify-between items-center -mt-3 px-8">
-      <Link to="/" className="flex  md:justify-start sm:justify-start w-full">
-        <img src={StolidLogo} alt="StolidZone Logo" className="w-28 sm:w-32 md:w-52 max-w-44 -ml-9 h-auto" />
-      </Link>
-  
-      {/* Desktop Menu */}
-      <div className="hidden sm:block w-full  justify-center -ml-96">
-  <Menu mode="horizontal" className="text-sm bg-transparent mt-6 font-bold" triggerSubMenuAction="hover">
-    {menuItems.map((item) =>
-      item.children ? (
-        <Menu.SubMenu className="font-bold" key={item.key} title={item.title} icon={null}>
-          {item.children.map((subItem) =>
-            subItem.children ? (
-              <Menu.SubMenu key={subItem.key} title={subItem.title}>
-                {subItem.children.map((child) => (
-                  <Menu.Item key={child.key} className="font-bold">
-                    <Link to={child.link}>{child.label}</Link>
-                  </Menu.Item>
-                ))}
-              </Menu.SubMenu>
-            ) : (
-              <Menu.Item key={subItem.key} className="font-bold">
-                <Link to={subItem.link}>{subItem.label}</Link>
-              </Menu.Item>
-            )
-          )}
-        </Menu.SubMenu>
-      ) : (
-        <Menu.Item key={item.key} className="font-bold">
-          <Link to={item.link || "#"}>{item.title}</Link>
-        </Menu.Item>
-      )
-    )}
-  </Menu>
-</div>
+    {/* Contact Info in Drawer */}
+    <div className="hidden sm:block"> <div className="flex flex-row gap-3 md:gap-2 items-center">
+  <motion.div
+    initial={{ x: -300, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    transition={{ duration: 0.7 }}
+    className="flex items-center  gap-2 text-sm md:text-base"
+  >
+    <MdOutlineMailOutline />
+    <Link onClick={handleMailClick} className="hover:underline font-inter">
+      info@stolidzonetechnologies.com
+    </Link>
+  </motion.div>
+  <RxDividerVertical className="hidden md:block text-2xl text-gray-600" />
+  <motion.div
+    initial={{ x: 300, opacity: 0 }}
+    animate={{ x: 0, opacity: 1 }}
+    transition={{ duration: 0.7 }}
+    className="flex items-center gap-2 text-sm md:text-base"
+  >
+    <IoLocationOutline />
+    <Link onClick={openMap} className="hover:underline font-inter">
+      12501 Revere Ave, Cleveland, Ohio 44105
+    </Link>
+  </motion.div>
 
-      {/* Mobile Menu */}
-      <div className="block sm:hidden  md:hidden">
-        <button onClick={toggleDrawer} className="p-2">
-          <MenuOutlined className="text-xl" />
-        </button>
-        <Drawer
-  title="Menu"
-  placement="right"
-  visible={drawerVisible}
-  onClose={toggleDrawer}
-  width="100%" // Set width to 100% for smaller screens
-  bodyStyle={{ padding: 0 }} // Remove padding from body for better control
->
-  <div className="relative flex items-center">
-    <button
-      onClick={handleSearchClick}
-      className="bg-white text-black p-4 mt-4  ml-2 rounded-full flex items-center justify-center transform transition-transform duration-300 ease-in-out hover:scale-110"
-    >
-      {!isSearchOpen ? <BsSearch size={20} /> : <MdOutlineCancel size={22} />}
-    </button>
-    <input
-      type="text"
-      placeholder="Search..."
-      className={`ml-2 px-4 py-3 mt-4 rounded-full border-2 focus:outline-none transition-all duration-300 ease-in-out ${
-        isSearchOpen ? "w-64 opacity-100" : "w-0 opacity-0"
-      }`}
-    />
-  </div>
-
-  {/* Mobile Menu Items */}
-  <Menu mode="inline" className="font-bold ">
-    {menuItems.map((item) =>
-      item.children ? (
-        <Menu.SubMenu key={item.key} title={item.title}>
-          {item.children.map((subItem) =>
-            subItem.children ? (
-              <Menu.SubMenu key={subItem.key} title={subItem.title}>
-                {subItem.children.map((child) => (
-                  <Menu.Item key={child.key} className="font-bold">
-                    <Link to={child.link}>{child.label}</Link>
-                  </Menu.Item>
-                ))}
-              </Menu.SubMenu>
-            ) : (
-              <Menu.Item key={subItem.key} className="font-bold">
-                <Link to={subItem.link}>{subItem.label}</Link>
-              </Menu.Item>
-            )
-          )}
-        </Menu.SubMenu>
-      ) : (
-        <Menu.Item key={item.key} className="font-bold">
-          <Link to={item.link || "#"}>{item.title}</Link>
-        </Menu.Item>
-      )
-    )}
-  </Menu>
-
-  {/* Contact Info in Drawer */}
-  <div className="flex flex-col gap-3 md:gap-6 mt-8 px-4">
-    <motion.div
-      initial={{ x: -300, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.7 }}
-      className="flex items-center gap-2 text-sm md:text-base"
-    >
-      <MdOutlineMailOutline />
-      <Link onClick={handleMailClick} className="hover:underline font-inter">
-        info@stolidzonetechnologies.com
-      </Link>
-    </motion.div>
-    <RxDividerVertical className="hidden md:block text-2xl text-gray-600" />
-    <motion.div
-      initial={{ x: 300, opacity: 0 }}
-      animate={{ x: 0, opacity: 1 }}
-      transition={{ duration: 0.7 }}
-      className="flex items-center gap-2 text-sm md:text-base"
-    >
-      <IoLocationOutline />
-      <Link onClick={openMap} className="hover:underline font-inter">
-        12501 Revere Ave, Cleveland, Ohio 44105
-      </Link>
-    </motion.div>
-  </div>
-
-  {/* Social Links in Drawer for Mobile */}
-  <div className="flex flex-col gap-4 mt-4 px-4">
+    {/* Social Links in Drawer for Mobile */}
+    <div className="flex flex-row gap-4  px-4">
     <Link
       to="https://www.facebook.com/stolidzonetechnologies"
       target="_blank"
@@ -800,22 +702,128 @@ const ResponsiveMenu = () => {
       <span className="text-[#E4405F]">Instagram</span>
     </Link>
   </div>
+</div>
 
-  {/* Appointment Button */}
-  <div className="mt-4 md:mt-0 ml-auto px-4">
-    <motion.div
-      initial={{ scale: 0.8, opacity: 0 }}
-      animate={{ scale: 1, opacity: 1 }}
-      transition={{ duration: 0.8 }}
-    >
-      <Link to="/appointment">
-        <button className="bg-blue-600 text-white px-9 py-4 mt-12 rounded-full flex hover:bg-black text-sm md:text-base font-bold group">
-          For An Appointment
-          <MdArrowOutward className="ml-2 text-2xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
-        </button>
+</div>
+
+    </div>
+  
+    <div className="flex justify-between items-center -mt-3 px-8">
+      <Link to="/" className="flex  md:justify-start sm:justify-start w-full">
+        <img src={StolidLogo} alt="StolidZone Logo" className="w-28 sm:w-32 md:w-52 max-w-44 -ml-9 h-auto" />
       </Link>
-    </motion.div>
+  
+      {/* Desktop Menu */}
+      <div className="hidden sm:block w-full  justify-center -ml-96">
+  <Menu mode="horizontal" className="text-sm bg-transparent mt-6 font-bold" triggerSubMenuAction="hover">
+    {menuItems.map((item) =>
+      item.children ? (
+        <Menu.SubMenu className="font-bold" key={item.key} title={item.title} icon={null}>
+          {item.children.map((subItem) =>
+            subItem.children ? (
+              <Menu.SubMenu key={subItem.key} title={subItem.title}>
+                {subItem.children.map((child) => (
+                  <Menu.Item key={child.key} className="font-bold">
+                    <Link to={child.link}>{child.label}</Link>
+                  </Menu.Item>
+                ))}
+              </Menu.SubMenu>
+            ) : (
+              <Menu.Item key={subItem.key} className="font-bold">
+                <Link to={subItem.link}>{subItem.label}</Link>
+              </Menu.Item>
+            )
+          )}
+        </Menu.SubMenu>
+      ) : (
+        <Menu.Item key={item.key} className="font-bold">
+          <Link to={item.link || "#"}>{item.title}</Link>
+        </Menu.Item>
+      )
+    )}
+    
+  </Menu>
+
+ 
+</div>
+<div className="hidden sm:block"><div className="md:mt-0 ml-auto  flex items-center gap-4">
+  <motion.div
+    initial={{ scale: 0.8, opacity: 0 }}
+    animate={{ scale: 1, opacity: 1 }}
+    transition={{ duration: 0.8 }}
+  >
+    <Link to="/appointment">
+      <button className="bg-blue-600 text-white px-10 py-4 mt-5 rounded-full flex hover:bg-black text-sm md:text-base font-bold group whitespace-nowrap">
+        For An Appointment
+        <MdArrowOutward className="ml-2 text-2xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
+      </button>
+    </Link>
+  </motion.div>
+  
+  <div className="relative flex items-center">
+    <button
+      onClick={handleSearchClick}
+      className="bg-white text-black p-4 mt-4 ml-2 rounded-full flex items-center justify-center transform transition-transform duration-300 ease-in-out hover:scale-110"
+    >
+      {!isSearchOpen ? <BsSearch size={20} /> : <MdOutlineCancel size={22} />}
+    </button>
+    <input
+      type="text"
+      placeholder="Search..."
+      className={`ml-2 px-4 py-3 mt-4 rounded-full border-2 focus:outline-none transition-all duration-300 ease-in-out ${isSearchOpen ? "w-64 opacity-100" : "w-0 opacity-0"}`}
+    />
   </div>
+</div></div>
+
+
+      {/* Mobile Menu */}
+      <div className="block sm:hidden  md:hidden">
+        <button onClick={toggleDrawer} className="p-2">
+          <MenuOutlined className="text-xl" />
+        </button>
+        <Drawer
+  title="Menu"
+  placement="right"
+  visible={drawerVisible}
+  onClose={toggleDrawer}
+  width="100%" // Set width to 100% for smaller screens
+  bodyStyle={{ padding: 0 }} // Remove padding from body for better control
+>
+ 
+
+  {/* Mobile Menu Items */}
+  <Menu mode="inline" className="font-bold ">
+    {menuItems.map((item) =>
+      item.children ? (
+        <Menu.SubMenu key={item.key} title={item.title}>
+          {item.children.map((subItem) =>
+            subItem.children ? (
+              <Menu.SubMenu key={subItem.key} title={subItem.title}>
+                {subItem.children.map((child) => (
+                  <Menu.Item key={child.key} className="font-bold">
+                    <Link to={child.link}>{child.label}</Link>
+                  </Menu.Item>
+                ))}
+              </Menu.SubMenu>
+            ) : (
+              <Menu.Item key={subItem.key} className="font-bold">
+                <Link to={subItem.link}>{subItem.label}</Link>
+              </Menu.Item>
+            )
+          )}
+        </Menu.SubMenu>
+      ) : (
+        <Menu.Item key={item.key} className="font-bold">
+          <Link to={item.link || "#"}>{item.title}</Link>
+        </Menu.Item>
+      )
+    )}
+  </Menu>
+
+
+
+
+ 
 </Drawer>
 
       </div>

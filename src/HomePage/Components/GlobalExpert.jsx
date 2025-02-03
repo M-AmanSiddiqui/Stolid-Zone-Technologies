@@ -48,7 +48,7 @@ function GlobalExpert() {
     <div className="bg-white py-28 px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h4 className="text-blue-800 text-lg font-medium bg-gray-100 inline-block py-2 px-3 rounded-lg">
+          <h4 className="text-[#FD8C01] text-lg font-medium bg-gray-100 inline-block py-2 px-3 rounded-lg">
             Team Mates
           </h4>
           <h1 className="text-4xl lg:text-5xl font-bold mt-2">

@@ -237,7 +237,7 @@
 
 import { Link } from "react-router-dom";
 import bgFooter from "../assets/Images/bgFooter.jpg";
-import FooterLogo from "../assets/Images/StolidLogo.png";
+import FooterLogo from "../assets/Images/stolid_logo-removebg-preview.png";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import { MdLocationOn, MdCall, MdOutlineMailOutline, MdAccessTime, MdArrowOutward } from "react-icons/md";
@@ -257,16 +257,14 @@ const Footer = () => {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center sm:text-left">
           Sign Up To Our Newsletter
         </h2>
-        <p className="bg-black text-sm sm:text-base md:text-lg py-2 px-4 text-center sm:text-left">
-          Subscribe to our Newsletter & Event right now to stay updated.
-        </p>
+        
         <div className="flex flex-col sm:flex-row md:flex-row sm:items-center w-full sm:w-auto gap-4 sm:gap-0">
           <input
             type="email"
             placeholder="Email Address"
             className="px-8 py-3 w-full sm:w-[300px] md:w-[350px] lg:w-[400px] xl:w-[500px] text-black rounded-full focus:outline-none sm:mb-4 md:mb-0"
           />
-          <button className="text-white bg-blue-600 px-8 py-3 sm:flex-row sm:px-0 sm:py-3 md:px-6 md:py-3 sm:w-69 md:w-[200px] lg:w-[200px] xl:w-[250px] w-full rounded-full flex justify-center items-center hover:bg-black text-sm font-bold group sm:mt-4 md:mt-0">
+          <button className="text-white bg-[#FD8C01] px-8 py-3 sm:flex-row sm:px-0 sm:py-3 md:px-6 md:py-3 sm:w-69 md:w-[200px] lg:w-[200px] xl:w-[250px] w-full rounded-full flex justify-center items-center hover:bg-black text-sm font-bold group sm:mt-4 md:mt-0">
             Subscribe Now
             <MdArrowOutward className="ml-2 text-2xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
           </button>
@@ -277,7 +275,7 @@ const Footer = () => {
       <div className="relative z-10 bg-white text-gray-500 rounded-2xl p-8 sm:p-12 lg:p-20 max-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-12">
         {/* About Section */}
         <div className="sm:border-r-2 border-gray-200 sm:mb-0 mb-8">
-          <img className="mb-4" src={FooterLogo} alt="Footer Logo" />
+          <img className="mb-4 -ml-8" src={FooterLogo} alt="Footer Logo" />
           <p className="text-sm sm:text-base">
             Our consulting services encompass a broad range, including strategic planning, operational efficiency, and more.
           </p>
@@ -285,30 +283,30 @@ const Footer = () => {
             <Link
               to="https://www.facebook.com/stolidzonetechnologies"
               target="_blank"
-              className="flex items-center gap-2 bg-gray-200 p-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
+              className="flex items-center text-black hover:text-[#FD8C01] hover:bg-black gap-2 bg-gray-200 p-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
             >
-              <FaFacebookF className="text-[#1877F2]" />
+              <FaFacebookF  />
             </Link>
             <Link
               to="https://x.com/StolidzoneT"
               target="_blank"
-              className="flex items-center gap-2 bg-gray-200 p-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
+              className="flex items-center gap-2 bg-gray-200 p-3 text-black hover:bg-black hover:text-[#FD8C01] rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
             >
-              <BsTwitterX className="text-black" />
+              <BsTwitterX />
             </Link>
             <Link
               to="https://www.linkedin.com/company/stolidzonetechnologies/"
               target="_blank"
-              className="flex items-center gap-2 bg-gray-200 p-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
+              className="flex items-center gap-2 bg-gray-200 p-3 text-black hover:bg-black hover:text-[#FD8C01]text-black hover:text-[#FD8C01] rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
             >
-              <FaLinkedinIn className="text-[#0A66C2]" />
+              <FaLinkedinIn />
             </Link>
             <Link
               to="https://www.instagram.com/stolidzone_technologies/"
               target="_blank"
-              className="flex items-center gap-2 bg-gray-200 p-3 rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
+              className="flex items-center gap-2 bg-gray-200 p-3 text-black hover:bg-black hover:text-[#FD8C01] rounded-full transform transition-transform duration-300 ease-in-out hover:scale-110 hover:translate-y-[-10px]"
             >
-              <FaInstagram className="text-[#E4405F]" />
+              <FaInstagram  />
             </Link>
           </div>
         </div>
@@ -320,7 +318,7 @@ const Footer = () => {
             <li>
               <Link
                 to="/store-management"
-                className="group flex items-center hover:text-blue-600 transition duration-300"
+                className="group flex items-center hover:text-[#FD8C01] transition duration-300"
               >
                 <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
                 Store Management Services
@@ -329,7 +327,7 @@ const Footer = () => {
             <li>
               <Link
                 to="/logistics"
-                className="group flex items-center hover:text-blue-600 transition duration-300"
+                className="group flex items-center hover:text-[#FD8C01] transition duration-300"
               >
                 <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
                 Logistics and Fulfillment Service
@@ -338,7 +336,7 @@ const Footer = () => {
             <li>
               <Link
                 to="/brand-guidelines"
-                className="group flex items-center hover:text-blue-600 transition duration-300"
+                className="group flex items-center hover:text-[#FD8C01] transition duration-300"
               >
                 <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
                 Brand Guidelines
@@ -347,7 +345,7 @@ const Footer = () => {
             <li>
               <Link
                 to="/store-front"
-                className="group flex items-center hover:text-blue-600 transition duration-300"
+                className="group flex items-center hover:text-[#FD8C01] transition duration-300"
               >
                 <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
                 Store Front and Branding
@@ -356,7 +354,7 @@ const Footer = () => {
             <li>
               <Link
                 to="/account-suspension"
-                className="group flex items-center hover:text-blue-600 transition duration-300"
+                className="group flex items-center hover:text-[#FD8C01] transition duration-300"
               >
                 <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
                 Account Suspension
@@ -365,7 +363,7 @@ const Footer = () => {
             <li>
               <Link
                 to="/product-launches"
-                className="group flex items-center hover:text-blue-600 transition duration-300"
+                className="group flex items-center hover:text-[#FD8C01] transition duration-300"
               >
                 <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
                 Product Launches
@@ -374,7 +372,7 @@ const Footer = () => {
             <li>
               <Link
                 to="/ppc-marketing"
-                className="group flex items-center hover:text-blue-600 transition duration-300"
+                className="group flex items-center hover:text-[#FD8C01] transition duration-300"
               >
                 <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
                 PPC Marketing
@@ -390,7 +388,7 @@ const Footer = () => {
             <li>
               <Link
                 to="/about"
-                className="group flex items-center hover:text-blue-600 transition duration-300"
+                className="group flex items-center hover:text-[#FD8C01] transition duration-300"
               >
                 <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
                 ABOUT
@@ -400,7 +398,7 @@ const Footer = () => {
             <li>
               <Link
                 to="/contact"
-                className="group flex items-center hover:text-blue-600 transition duration-300"
+                className="group flex items-center hover:text-[#FD8C01] transition duration-300"
               >
                 <MdArrowOutward className="mr-2 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
                 CONTACT
@@ -413,8 +411,8 @@ const Footer = () => {
         <div>
           <h2 className="text-xl font-bold mb-8 text-black underline underline-offset-8">Company Address</h2>
           <ul className="space-y-3 font-semibold">
-            <li className="flex items-center gap-2 hover:text-blue-500">
-              <MdLocationOn className="text-blue-600 flex-shrink-0" />
+            <li className="flex items-center gap-2 hover:text-[#FD8C01]">
+              <MdLocationOn className="text-[#FD8C01] flex-shrink-0" />
               <Link
                 to="https://www.google.com/maps?q=12501+Revere+Ave+Cleveland,+Ohio+44105"
                 target="_blank"
@@ -422,19 +420,19 @@ const Footer = () => {
                 12501 Revere Ave Cleveland, Ohio 44105
               </Link>
             </li>
-            <li className="flex items-center gap-2 hover:text-blue-500">
-              <MdCall className="text-blue-600" />
+            <li className="flex items-center gap-2 hover:text-[#FD8C01]">
+              <MdCall className="text-[#FD8C01]" />
               <Link to="tel:+14403749502">Call: +14403749502</Link>
             </li>
-            <li className="flex items-center gap-2 hover:text-blue-500">
-              <MdOutlineMailOutline className="text-blue-600 flex-shrink-0" />
+            <li className="flex items-center gap-2 hover:text-[#FD8C01]">
+              <MdOutlineMailOutline className="text-[#FD8C01] flex-shrink-0" />
               <Link to="mailto:info@stolidzonetechnologies.com">
                 info@stolidzonetechnologies.com
               </Link>
             </li>
 
             <li className="flex items-center gap-2">
-              <MdAccessTime className="text-blue-600" />
+              <MdAccessTime className="text-[#FD8C01]" />
               Timing: 8:00am - 17:00pm
             </li>
           </ul>

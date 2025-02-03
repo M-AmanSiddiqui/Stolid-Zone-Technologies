@@ -9,7 +9,7 @@ const SomeAnswer = () => {
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 items-center gap-8 pb-16">
         {/* Left Side Content */}
         <div>
-          <button className="text-sm font-medium text-blue-600 bg-blue-100 px-4 py-2 rounded-lg mb-4">
+          <button className="text-sm font-medium text-[#FD8C01] bg-white px-4 py-2 rounded-lg mb-4">
             Get Some Question Answer
           </button>
           <motion.div

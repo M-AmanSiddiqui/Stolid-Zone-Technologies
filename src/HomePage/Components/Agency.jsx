@@ -11,7 +11,7 @@ function Agency() {
     <div className="bg-white px-20 py-16">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
-          <h4 className="text-blue-800 text-lg font-medium bg-gray-50 inline-block py-1 px-3 rounded-lg">
+          <h4 className="text-[#FD8C01] text-lg font-medium bg-gray-50 inline-block py-1 px-3 rounded-lg">
             About Us
           </h4>
           <h1 className="text-4xl lg:text-6xl font-bold mt-6">
@@ -33,14 +33,14 @@ function Agency() {
   whileInView={{ y: 0, opacity: 1 }} // Animate to the center
   transition={{ duration: 0.7 }} // Animation duration
 > <div className="flex items-center gap-4">
-              <div className="bg-blue-700 p-3 rounded-full">
+              <div className="bg-blue-50 p-3 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
                   stroke="currentColor"
-                  className="w-8 h-8 text-white"
+                  className="w-8 h-8 text-[#FD8C01]"
                 >
                   <path
                     strokeLinecap="round"
@@ -59,14 +59,14 @@ function Agency() {
   initial={{ y: 300, opacity: 0 }} // Start animation from the left
   whileInView={{ y: 0, opacity: 1 }} // Animate to the center
   transition={{ duration: 0.7 }} // Animation duration
->   <div className="bg-blue-700 p-3 rounded-full">
+>   <div className="bg-blue-50 p-3 rounded-full">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
                   strokeWidth={2}
                   stroke="currentColor"
-                  className="w-8 h-8 text-white"
+                  className="w-8 h-8 text-[#FD8C01]"
                 >
                   <path
                     strokeLinecap="round"
@@ -89,7 +89,7 @@ function Agency() {
  
 >
   <Link to="/appointment">
-    <button className="bg-blue-600 text-white px-9 py-4 mt-12 rounded-full flex hover:bg-black text-sm md:text-base font-bold group">
+    <button className="bg-[#FD8C01] text-white px-9 py-4 mt-12 rounded-full flex hover:bg-black text-sm md:text-base font-bold group">
       For An Appointment
       <MdArrowOutward className="ml-2 text-2xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
     </button>

@@ -282,7 +282,7 @@ function Testimonials() {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
-          <h4 className="text-blue-800 text-lg font-medium bg-gray-100 inline-block py-2 px-3 rounded-lg">
+          <h4 className="text-[#FD8C01] text-lg font-medium bg-gray-100 inline-block py-2 px-3 rounded-lg">
             Service We Provide
           </h4>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mt-2">
@@ -300,7 +300,7 @@ function Testimonials() {
             transition={{ duration: 0.9 }}
           >
             <div className="bg-white shadow-lg rounded-3xl p-8 transform transition-transform duration-300 ease-in-out hover:scale-110">
-              <div className="flex hover:bg-blue-700 text-blue-800 hover:text-white bg-blue-50 p-4 w-16 rounded-full mb-6">
+              <div className="flex hover:bg-black  text-[#FD8C01] bg-blue-50 p-4 w-16 rounded-full mb-6">
                 <FiSearch className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold mb-4">Strategic Solutions</h3>
@@ -310,7 +310,7 @@ function Testimonials() {
               </p>
               <Link
                 to="/growth-consultants"
-                className="text-blue-800 hover:text-black font-medium text-lg mt-8 group flex"
+                className="text-[#FD8C01] hover:text-black font-medium text-lg mt-8 group flex"
               >
                 Read More
                 <MdArrowOutward className="ml-1 mt-1 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
@@ -326,7 +326,7 @@ function Testimonials() {
             transition={{ duration: 0.9 }}
           >
             <div className="bg-white shadow-lg rounded-3xl p-8 transform transition-transform duration-300 ease-in-out hover:scale-110">
-              <div className="flex hover:bg-blue-700 text-blue-800 hover:text-white bg-blue-50 p-4 w-16 rounded-full mb-6">
+              <div className="flex hover:bg-black  text-[#FD8C01] bg-blue-50 p-4 w-16 rounded-full mb-6">
                 <FiUsers className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold mb-4">Growth Consultants</h3>
@@ -336,7 +336,7 @@ function Testimonials() {
               </p>
               <Link
                 to="/growth-consultants"
-                className="text-blue-800 hover:text-black font-medium text-lg mt-8 group flex"
+                className="text-[#FD8C01] hover:text-black font-medium text-lg mt-8 group flex"
               >
                 Read More
                 <MdArrowOutward className="ml-1 mt-1 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
@@ -352,7 +352,7 @@ function Testimonials() {
             transition={{ duration: 0.9 }}
           >
             <div className="bg-white shadow-lg rounded-3xl p-8 transform transition-transform duration-300 ease-in-out hover:scale-110">
-              <div className="flex hover:bg-blue-700 text-blue-800 hover:text-white bg-blue-50 p-4 w-16 rounded-full mb-6">
+              <div className="flex hover:bg-black  text-[#FD8C01] bg-blue-50 p-4 w-16 rounded-full mb-6">
                 <FiBarChart2 className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold mb-4">Market Research</h3>
@@ -362,7 +362,7 @@ function Testimonials() {
               </p>
               <Link
                 to="/growth-consultants"
-                className="text-blue-800 hover:text-black font-medium text-lg mt-8 group flex"
+                className="text-[#FD8C01] hover:text-black font-medium text-lg mt-8 group flex"
               >
                 Read More
                 <MdArrowOutward className="ml-1 mt-1 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
@@ -378,7 +378,7 @@ function Testimonials() {
             transition={{ duration: 0.9 }}
           >
             <div className="bg-white shadow-lg rounded-3xl p-8 transform transition-transform duration-300 ease-in-out hover:scale-110">
-              <div className="flex hover:bg-blue-700 text-blue-800 hover:text-white bg-blue-50 p-4 w-16 rounded-full mb-6">
+              <div className="flex hover:bg-black  text-[#FD8C01] bg-blue-50 p-4 w-16 rounded-full mb-6">
                 <FiBriefcase className="w-8 h-8" />
               </div>
               <h3 className="text-xl font-bold mb-4">Tax Management</h3>
@@ -388,7 +388,7 @@ function Testimonials() {
               </p>
               <Link
                 to="/growth-consultants"
-                className="text-blue-800 hover:text-black font-medium text-lg mt-8 group flex"
+                className="text-[#FD8C01] hover:text-black font-medium text-lg mt-8 group flex"
               >
                 Read More
                 <MdArrowOutward className="ml-1 mt-1 text-1xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />

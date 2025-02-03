@@ -11,8 +11,14 @@ function HomePage() {
   return (
     <div className="overflow-hidden overflow-x-hidden">
       <Header />
-      
-      <BgHomePage /><Card /><Agency /><Testimonials /><GlobalExpert /><SomeAnswer /><LatestNews /><Footer />
+      <BgHomePage />
+      <Card />
+      <Agency />
+      <Testimonials />
+      <GlobalExpert />
+      <SomeAnswer />
+      <LatestNews />
+      <Footer />
     </div>
   );
 }

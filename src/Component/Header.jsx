@@ -413,9 +413,11 @@ import { MdOutlineMailOutline,MdArrowOutward,MdOutlineCancel } from "react-icons
 import { BsTwitterX,BsSearch  } from "react-icons/bs";
 import { FaFacebookF, FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
-import StolidLogo from "../assets/Images/StolidLogo.png";
+import StolidLogo from "../assets/Images/stolid_logo-removebg-preview.png";
 import { useState } from "react";
-import { Menu, Drawer } from 'antd';
+import {  Drawer } from 'antd';
+import { Menu } from "antd";
+import "antd/dist/reset.css"
 import { MenuOutlined } from '@ant-design/icons';
 
 
@@ -644,10 +646,10 @@ const ResponsiveMenu = () => {
       initial={{ x: -300, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.7 }}
-      className="flex items-center gap-2 text-sm sm:text-base"
+      className="flex items-center gap-2 text-sm sm:text-base hover:text-[#FD8C01]"
     >
       <MdOutlineMailOutline />
-      <Link onClick={handleMailClick} className="hover:underline font-inter">
+      <Link onClick={handleMailClick} className=" font-inter">
         info@stolidzonetechnologies.com
       </Link>
     </motion.div>
@@ -658,10 +660,10 @@ const ResponsiveMenu = () => {
       initial={{ x: 300, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ duration: 0.7 }}
-      className="flex items-center gap-2 text-sm sm:text-base"
+      className="flex items-center gap-2 text-sm sm:text-base hover:text-[#FD8C01]"
     >
       <IoLocationOutline />
-      <Link onClick={openMap} className="hover:underline font-inter">
+      <Link onClick={openMap} className=" font-inter">
         12501 Revere Ave, Cleveland, Ohio 44105
       </Link>
     </motion.div>
@@ -672,16 +674,16 @@ const ResponsiveMenu = () => {
         to="https://www.facebook.com/stolidzonetechnologies"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 transform transition-transform duration-300 ease-in-out hover:scale-110"
+        className="flex items-center gap-2 transform transition-transform duration-300 ease-in-out hover:scale-110 text-black hover:text-[#FD8C01]"
       >
-        <FaFacebookF className="text-[#1877F2]" />
-        <span className="text-[#1877F2]">Facebook</span>
+        <FaFacebookF/>
+        <span>Facebook</span>
       </Link>
       <Link
         to="https://x.com/StolidzoneT"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 transform transition-transform duration-300 ease-in-out hover:scale-110"
+        className="flex items-center gap-2 transform transition-transform duration-300 ease-in-out hover:scale-110 text-black hover:text-[#FD8C01]"
       >
         <BsTwitterX />
         <span>Twitter</span>
@@ -690,19 +692,19 @@ const ResponsiveMenu = () => {
         to="https://www.linkedin.com/company/stolidzone-technologies/"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 transform transition-transform duration-300 ease-in-out hover:scale-110"
+        className="flex items-center gap-2 transform transition-transform duration-300 ease-in-out hover:scale-110 text-black hover:text-[#FD8C01]"
       >
-        <FaLinkedinIn className="text-[#0A66C2]" />
-        <span className="text-[#0A66C2]">LinkedIn</span>
+        <FaLinkedinIn />
+        <span>LinkedIn</span>
       </Link>
       <Link
         to="https://www.instagram.com/stolidzone_technologies/"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 transform transition-transform duration-300 ease-in-out hover:scale-110"
+        className="flex items-center gap-2 transform transition-transform duration-300 ease-in-out hover:scale-110 text-black hover:text-[#FD8C01]"
       >
-        <FaInstagram className="text-[#E4405F]" />
-        <span className="text-[#E4405F]">Instagram</span>
+        <FaInstagram />
+        <span>Instagram</span>
       </Link>
     </div>
   </div>
@@ -712,26 +714,29 @@ const ResponsiveMenu = () => {
   
     <div className="flex justify-between items-center -mt-3 px-8">
       <Link to="/" className="flex  md:justify-start sm:justify-start w-full">
-        <img src={StolidLogo} alt="StolidZone Logo" className="w-28 sm:w-32 md:w-52 max-w-44 -ml-9 h-auto" />
+        <img src={StolidLogo} alt="StolidZone Logo" className="w-28 sm:w-32 md:w-52 max-w-44 -ml-3 h-auto" />
       </Link>
   
       {/* Desktop Menu */}
-      <div className="hidden sm:block w-full  justify-center -ml-96">
-  <Menu mode="horizontal" className="text-sm bg-transparent mt-6 font-bold" triggerSubMenuAction="hover">
+      <div className="hidden sm:block w-full  justify-center -ml-96">   <Menu
+        mode="horizontal"
+        className="text-sm bg-transparent mt-6 font-bold !border-none !shadow-none custom-menu"
+        triggerSubMenuAction="hover"
+      >
     {menuItems.map((item) =>
       item.children ? (
         <Menu.SubMenu className="font-bold" key={item.key} title={item.title} icon={null}>
           {item.children.map((subItem) =>
             subItem.children ? (
-              <Menu.SubMenu key={subItem.key} title={subItem.title} className="font-bold">
+              <Menu.SubMenu key={subItem.key} title={subItem.title} className="font-bold hover:underline-none">
                 {subItem.children.map((child) => (
-                  <Menu.Item key={child.key} className="font-bold">
+                  <Menu.Item key={child.key} className="font-bold hover:underline-none">
                     <Link to={child.link}>{child.label}</Link>
                   </Menu.Item>
                 ))}
               </Menu.SubMenu>
             ) : (
-              <Menu.Item key={subItem.key} className="font-bold">
+              <Menu.Item key={subItem.key} className="font-bold hover:underline-none">
                 <Link to={subItem.link}>{subItem.label}</Link>
               </Menu.Item>
             )
@@ -757,7 +762,7 @@ const ResponsiveMenu = () => {
       transition={{ duration: 0.8 }}
     >
       <Link to="/appointment">
-        <button className="bg-blue-600 text-white px-10 py-4 mt-5 rounded-full flex hover:bg-black text-sm md:text-base font-bold group whitespace-nowrap">
+        <button className="bg-[#FD8C01] text-white px-10 py-4 mt-5 rounded-full flex hover:bg-black text-sm md:text-base font-bold group whitespace-nowrap">
           For An Appointment
           <MdArrowOutward className="ml-2 text-2xl font-extrabold transform group-hover:rotate-45 transition-transform duration-300" />
         </button>

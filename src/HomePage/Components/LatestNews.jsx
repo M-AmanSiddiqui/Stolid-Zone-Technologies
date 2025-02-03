@@ -149,7 +149,7 @@ function LatestNews() {
     <div className="bg-white py-16 px-6 lg:px-20">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
-          <h4 className="text-blue-800 text-lg font-medium bg-gray-100 inline-block py-2 px-3 rounded-lg">
+          <h4 className="text-[#FD8C01] text-lg font-medium bg-gray-100 inline-block py-2 px-3 rounded-lg">
             Latest News
           </h4>
           <h1 className="text-4xl sm:text-5xl font-bold mt-2">
@@ -174,7 +174,7 @@ function LatestNews() {
               <div className="p-6">
                 <div className="text-sm text-gray-500 font-semibold flex items-center gap-2">
                   <span className="text-gray-500 flex gap-2">
-                    <FaBook className="mt-1 text-blue-500" /> Business Solution
+                    <FaBook className="mt-1 text-[#FD8C01]" /> Business Solution
                   </span>
                 </div>
                 <hr className="mt-6" />
@@ -211,7 +211,7 @@ function LatestNews() {
               <div className="p-6">
                 <div className="text-sm text-gray-500 font-semibold flex items-center gap-2">
                   <span className="text-gray-500 flex gap-2">
-                    <FaBook className="mt-1 text-blue-500" /> Finance Solution
+                    <FaBook className="mt-1 text-[#FD8C01]" /> Finance Solution
                   </span>
                 </div>
                 <hr className="mt-6" />
@@ -248,7 +248,7 @@ function LatestNews() {
               <div className="p-6">
                 <div className="text-sm text-gray-500 font-semibold flex items-center gap-2">
                   <span className="text-gray-500 flex gap-2">
-                    <FaBook className="mt-1 text-blue-500" /> Investment Policy
+                    <FaBook className="mt-1 text-[#FD8C01]" /> Investment Policy
                   </span>
                 </div>
                 <hr className="mt-6" />

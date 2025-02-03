@@ -15,7 +15,7 @@ function Card() {
 >
           <div className="bg-white shadow-md rounded-2xl lg:p-14 p-8 text-center">
             <div className="flex justify-center mb-4">
-            <div className="bg-blue-50 p-5 rounded-full hover:bg-blue-600 hover:text-white text-blue-600">   <FaCog className=" text-5xl" /></div>
+            <div className="bg-blue-50 p-5 rounded-full hover:bg-black  text-[#FD8C01]">   <FaCog className=" text-5xl" /></div>
             </div>
             <h3 className="text-xl font-bold text-gray-800">
               Quality Client Services
@@ -36,7 +36,7 @@ function Card() {
 >
           <div className="bg-white shadow-md rounded-2xl lg:p-14 p-8 text-center">
             <div className="flex justify-center mb-4">
-           <div className="bg-blue-50 p-5 rounded-full hover:bg-blue-600 hover:text-white text-blue-600">   <FaLightbulb className=" text-5xl" /></div>
+           <div className="bg-blue-50 p-5 rounded-full hover:bg-black  text-[#FD8C01]">   <FaLightbulb className=" text-5xl" /></div>
             </div>
             <h3 className="text-xl font-bold text-gray-800">
               Unique Innovation Ideas
@@ -56,7 +56,7 @@ function Card() {
 >
           <div className="bg-white shadow-md rounded-2xl lg:p-14 p-8 text-center">
             <div className="flex justify-center mb-4">
-            <div className="bg-blue-50 p-5 rounded-full hover:bg-blue-600 hover:text-white text-blue-600">   <FaChartBar className=" text-5xl" /></div>
+            <div className="bg-blue-50 p-5 rounded-full hover:bg-black  text-[#FD8C01]">   <FaChartBar className=" text-5xl" /></div>
             </div>
             <h3 className="text-xl font-bold text-gray-800">
               Business Growth Manage

@@ -1,4 +1,4 @@
-// import BgHero from "../../assets/Images/BgHomePage.mp4";
+import BgHero from "../../assets/Images/0204 (1).mp4";
 import { motion } from "framer-motion";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -6,15 +6,15 @@ function BgHomePage() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Video */}
-      {/* <video
-        className="absolute top-14 sm:top-14 left-0 w-full h-full object-cover z-0"
-        autoPlay
-        loop
-        muted
-        playsInline
-      >
-        <source src={BgHero} type="video/mp4" />
-      </video> */}
+      <video
+  className="absolute top-14 left-0 w-full h-auto min-h-screen object-cover sm:block hidden"
+  autoPlay
+  loop
+  muted
+  playsInline
+>
+  <source src={BgHero} type="video/mp4" />
+</video>
 
       {/* Content Overlay */}
       <div className="relative z-10 flex flex-col items-start justify-center px-6 md:px-24 lg:px-32 h-full space-y-6">

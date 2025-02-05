@@ -1,4 +1,4 @@
-import BgHero from "../../assets/Images/0204 (1).mp4";
+// import BgHero from "../../assets/Images/0204 (1).mp4";
 import { motion } from "framer-motion";
 import { MdArrowOutward } from "react-icons/md";
 
@@ -6,15 +6,15 @@ function BgHomePage() {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Background Video */}
-      <video
-  className="absolute top-14 left-0 w-full h-auto min-h-screen object-cover sm:block hidden"
+      {/* <video
+  className="absolute top-14 right-0 w-full h-auto min-h-screen object-cover sm:block hidden"
   autoPlay
   loop
   muted
   playsInline
 >
   <source src={BgHero} type="video/mp4" />
-</video>
+</video> */}
 
       {/* Content Overlay */}
       <div className="relative z-10 flex flex-col items-start justify-center px-6 md:px-24 lg:px-32 h-full space-y-6">
@@ -65,22 +65,6 @@ function BgHomePage() {
 </motion.div>
 
 
-
-        {/* <motion.div
-  className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 "
-  initial={{ x: -300, opacity: 0 }}
-  whileInView={{ x: 0, opacity: 1 }}
-  transition={{ duration: 0.7 }}
->
-  <button className="w-full sm:w-auto px-9 py-4 rounded-full flex bg-blue-600 text-white text-sm sm:text-base font-semibold group">
-    Make An Appointment
-    <MdArrowOutward className="ml-2 text-2xl transform group-hover:rotate-45 transition-transform duration-300" />
-  </button>
-  <button className="w-full sm:w-auto text-blue-600 bg-white px-8 py-4 rounded-full flex hover:bg-blue-600 hover:text-white text-sm sm:text-base font-semibold group">
-    Our Services
-    <MdArrowOutward className="ml-2 text-2xl transform group-hover:rotate-45 transition-transform duration-300" />
-  </button>
-</motion.div> */}
       </div>
     </div>
   );

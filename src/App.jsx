@@ -1,8 +1,8 @@
 import  { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"; // Correct import path for 'react-router-dom'
-import HomePage from "./HomePage/HomePage"; // Make sure the path is correct
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom"; 
+import HomePage from "./HomePage/HomePage";
+import BoostSales from "./Services/BOOST YOUR SALES/BoostSales";
 
-// ScrollToTop component to scroll to the top of the page on each route change
 function ScrollToTop() {
   const location = useLocation();
 
@@ -15,11 +15,12 @@ function ScrollToTop() {
 
 const App = () => {
   return (
-    <BrowserRouter>  {/* No need to wrap BrowserRouter here if it's in index.js */}
+    <BrowserRouter>  
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        {/* Add more routes if needed */}
+        <Route path="/BoostSales" element={<BoostSales />} />
+       
       </Routes>
     </BrowserRouter>
   );

@@ -482,6 +482,7 @@ const ResponsiveMenu = () => {
     {
       key: 'whatWeDo',
       title: 'WHAT WE DO',
+     
       children: [
         {
           key: 'ecommerceMarketing',
@@ -629,7 +630,7 @@ const ResponsiveMenu = () => {
       key: 'services',
       title: 'SERVICES',
       children: [
-        { key: 'boostSales', label: 'BOOST YOUR SALES', link: '/BOOST YOUR SALES' },
+        { key: 'boostSales', label: 'BOOST YOUR SALES', link: '/BoostSales' },
         { key: 'fbaWholesale', label: 'FBA WHOLESALE SERVICE', link: '/FBA WHOLESALE SERVICE' },
         { key: 'productlaunch', label: 'PRODUCT LAUNCH SERVICE', link: '/PRODUCT LAUNCH SERVICE' },
         { key: 'selleraccount', label: 'SELLER ACCOUNT MANAGEMENT SERVICE', link: '/SELLER ACCOUNT MANAGEMENT SERVICE' },
